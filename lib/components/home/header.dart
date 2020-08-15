@@ -1,3 +1,4 @@
+import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -16,10 +17,10 @@ class Header extends StatelessWidget {
           Container(
             height: size.height * 0.35 - 27,
             decoration: BoxDecoration(
-                color: Colors.blueGrey,
+                color: colorPrimary,
                 borderRadius: BorderRadius.circular(20)),
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 50),
+              margin: EdgeInsets.only(left: 20, top: 30),
               child: Row(
                 children: <Widget>[
                   Text(
@@ -31,18 +32,7 @@ class Header extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: size.height * 0.05,
-            left: 10,
-            child: Row(
-              children: <Widget>[
-                IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-                SizedBox(width: size.width * 0.7),
-                CircleAvatar(),
-              ],
-            ),
-          ),
-          Positioned(
-              bottom: size.height * 0.12,
+              bottom: size.height * 0.13,
               left: 20,
               child: Text(
                 "Let's start a great day",
@@ -62,9 +52,9 @@ class Header extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black45,
-                        offset: Offset(0, 10),
-                        blurRadius: 30,
+                        color: colorPrimary,
+                        offset: Offset(0, 0),
+                        blurRadius: 20,
                       )
                     ]),
                 child: Row(

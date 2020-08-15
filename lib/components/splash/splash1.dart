@@ -1,3 +1,4 @@
+import 'package:edu_life/components/home/home_dashboard.dart';
 import 'package:edu_life/components/splash/slider_tile.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:edu_life/config/slider.dart';
@@ -49,7 +50,11 @@ class _FirstSplashState extends State<FirstSplash> {
             children: <Widget>[
               SizedBox(height: 30),
               Container(
-                child: Image.asset("assets/images/logo.png"),
+                padding: EdgeInsets.only(top: 20),
+                child: Image.asset(
+                  "assets/images/logo.png",
+                  scale: 12,
+                ),
               ),
               SizedBox(height: 150),
               SliderTile(
@@ -124,7 +129,12 @@ class _FirstSplashState extends State<FirstSplash> {
                         fontSize: 16),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeDashboard()));
+                    },
                     child: Text(
                       "Login",
                       style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class MoreOfSubMenu extends StatelessWidget {
@@ -25,7 +26,7 @@ class MoreOfSubMenu extends StatelessWidget {
           ),
           Spacer(),
           FlatButton(
-            color: Colors.blueGrey,
+            color: colorPrimary,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             onPressed: onHitMore,
