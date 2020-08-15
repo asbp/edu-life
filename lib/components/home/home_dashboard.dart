@@ -1,3 +1,4 @@
+import 'package:edu_life/components/bottom_nav.dart';
 import 'package:edu_life/components/home/header.dart';
 import 'package:edu_life/components/home/home_card_image.dart';
 import 'package:edu_life/components/home/more_submenu.dart';
@@ -43,6 +44,7 @@ class HomeDashboard extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavbar(selectedIndex: 0),
     );
   }
 }
