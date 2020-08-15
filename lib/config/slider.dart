@@ -31,13 +31,6 @@ class SliderModel {
 List<SliderModel> getSlides() {
   List<SliderModel> slides = new List<SliderModel>();
 
-  SliderModel slide = new SliderModel();
-
-  slide.setImgAsset("assets/images/logo.png");
-  slide.setTitle("by Edulife Team");
-  slide.setDesctiption("");
-  slides.add(slide);
-
   SliderModel slide1 = new SliderModel();
 
   slide1.setImgAsset("assets/images/standing19.png");

@@ -7,15 +7,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  final bool loggedIn = false;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white
-      ),
-      // home: HomeDashboard(),
-      home: FirstSplash(),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+      home: loggedIn ? HomeDashboard() : FirstSplash(),
     );
   }
 }
