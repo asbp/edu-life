@@ -1,4 +1,5 @@
 import 'package:edu_life/components/home/home_dashboard.dart';
+import 'package:edu_life/components/splash/splash1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white
       ),
-      home: HomeDashboard(),
+      // home: HomeDashboard(),
+      home: FirstSplash(),
     );
   }
 }
