@@ -1,4 +1,3 @@
-import 'package:edu_life/components/bottom_nav.dart';
 import 'package:edu_life/components/home/header.dart';
 import 'package:edu_life/components/home/home_card_image.dart';
 import 'package:edu_life/components/home/more_submenu.dart';
@@ -7,7 +6,7 @@ import 'package:flutter/material.dart';
 class HomeDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -44,7 +43,6 @@ class HomeDashboard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavbar(selectedIndex: 0),
     );
   }
 }

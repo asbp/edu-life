@@ -1,81 +1,64 @@
-import 'package:edu_life/config/constants.dart';
+import 'package:edu_life/components/forum/forum.dart';
+import 'package:edu_life/components/profile/profile.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavbar extends StatelessWidget {
-  const BottomNavbar({Key key, this.selectedIndex}) : super(key: key);
+import '../config/constants.dart';
+import 'home/home_dashboard.dart';
 
-  final int selectedIndex;
+class BottomNavbar extends StatefulWidget {
+  @override
+  _BottomNavbarState createState() => _BottomNavbarState();
+}
+
+class _BottomNavbarState extends State<BottomNavbar> {
+  int _selectedIndex = 0;
+  
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  initState() {
+    super.initState();
+  }
+
+  Widget getPage() {
+    switch(_selectedIndex) {
+      case 0: return HomeDashboard();
+      case 1: return Forum();
+      case 2: return Profile();
+      default: return HomeDashboard();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: colorPrimary,
-        boxShadow: [
-          BoxShadow(
-              offset: Offset(0, -10), blurRadius: 30, color: Colors.white),
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: selectedIndex == 0
-                          ? BorderSide(color: Colors.white, width: 6)
-                          : BorderSide(color: colorPrimary, width: 0))),
-              child: IconButton(
-                icon: Icon(
-                  Icons.home,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-
-                },
-              ),
-            ),
+    return Scaffold(
+      body: getPage(),
+      bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: false,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
           ),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: selectedIndex == 1
-                          ? BorderSide(color: Colors.white, width: 6)
-                          : BorderSide(color: colorPrimary, width: 0))),
-              child: IconButton(
-                icon: Icon(
-                  Icons.list,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                  
-                },
-              ),
-            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            title: Text('Forum'),
           ),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: selectedIndex == 2
-                          ? BorderSide(color: Colors.white, width: 6)
-                          : BorderSide(color: colorPrimary, width: 0))),
-              child: IconButton(
-                icon: Icon(
-                  Icons.supervised_user_circle,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                 
-                },
-              ),
-            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.supervised_user_circle),
+            title: Text('Profile'),
           ),
         ],
+        currentIndex: _selectedIndex,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.white,
+        backgroundColor: colorPrimary,
+        iconSize: 30,
+        onTap: _onItemTapped,
+        elevation: 0.0,
       ),
     );
   }

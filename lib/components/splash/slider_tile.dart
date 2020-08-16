@@ -39,7 +39,7 @@ class SliderTile extends StatelessWidget {
           pageIndex == 2 ? GestureDetector(
             onTap: (){},
             child: Container(
-              margin: EdgeInsets.only(top: 50),
+              margin: EdgeInsets.only(top: 30),
               width: 250,
               height: 50,
               decoration: BoxDecoration(

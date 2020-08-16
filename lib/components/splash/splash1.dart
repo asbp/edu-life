@@ -1,8 +1,9 @@
-import 'package:edu_life/components/home/home_dashboard.dart';
 import 'package:edu_life/components/splash/slider_tile.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:edu_life/config/slider.dart';
 import 'package:flutter/material.dart';
+
+import '../bottom_nav.dart';
 
 class FirstSplash extends StatefulWidget {
   @override
@@ -48,7 +49,7 @@ class _FirstSplashState extends State<FirstSplash> {
           return Column(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Container(
                 padding: EdgeInsets.only(top: 20),
                 child: Image.asset(
@@ -133,7 +134,7 @@ class _FirstSplashState extends State<FirstSplash> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => HomeDashboard()));
+                              builder: (context) => BottomNavbar()));
                     },
                     child: Text(
                       "Login",
