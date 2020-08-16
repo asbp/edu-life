@@ -18,7 +18,11 @@ class Header extends StatelessWidget {
             height: size.height * 0.35 - 27,
             decoration: BoxDecoration(
                 color: colorPrimary,
-                borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20), 
+                  bottomRight: Radius.circular(20)
+                )
+              ),
             child: Container(
               margin: EdgeInsets.only(left: 20, top: 30),
               child: Row(
