@@ -52,15 +52,10 @@ class Header extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 25),
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: colorSmallComponent,
                     borderRadius: BorderRadius.circular(25),
-                    boxShadow: [
-                      BoxShadow(
-                        color: colorPrimary,
-                        offset: Offset(0, 0),
-                        blurRadius: 20,
-                      )
-                    ]),
+                    boxShadow: darkShadow
+                ),
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -69,7 +64,7 @@ class Header extends StatelessWidget {
                         decoration: InputDecoration(
                             hintText: "Search",
                             hintStyle:
-                                TextStyle(color: Colors.grey.withOpacity(0.7)),
+                                TextStyle(color: Colors.black),
                             enabledBorder: InputBorder.none,
                             focusedBorder: InputBorder.none),
                       ),

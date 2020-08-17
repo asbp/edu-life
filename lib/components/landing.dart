@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:edu_life/components/home/home_dashboard.dart';
-import 'package:edu_life/components/splash/splash1.dart';
+import 'package:edu_life/components/splash/splash.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 

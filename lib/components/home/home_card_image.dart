@@ -1,3 +1,4 @@
+import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeCardImage extends StatelessWidget {
@@ -15,13 +16,8 @@ class HomeCardImage extends StatelessWidget {
       width: size.width * 0.4,
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 10),
-            blurRadius: 30,
-            color: Colors.black12
-          )
-      ]),
+        boxShadow: darkShadow
+      ),
       child: Stack(
         children: <Widget>[
           Image.asset(img),
