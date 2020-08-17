@@ -32,26 +32,27 @@ class _LandingScreenState extends State<LandingScreen> {
     return Scaffold(
       backgroundColor: colorPrimary,
       body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Image.asset("assets/images/logo.png",scale: 3),
+              SizedBox(height: 10,),
+            ],
+          ),
+        )
+      ),
+      bottomNavigationBar: Container(
+        padding: EdgeInsets.all(8.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            SizedBox(height: 300),
-            Center(
-              child: Image.asset(
-                "assets/images/logo.png",
-                scale: 4,
-              ),
-            ),
-            SizedBox(height: 300),
-            Center(
-                child: Text(
-              "By Edulife Team",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.normal),
-            ))
+            Text("EduLife", 
+              style: Theme.of(context).textTheme.subtitle1.merge(TextStyle(color: Theme.of(context).colorScheme.onPrimary)),
+              )
           ],
-        ),
+        )
       ),
     );
   }
