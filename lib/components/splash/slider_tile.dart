@@ -1,3 +1,4 @@
+import 'package:edu_life/components/register/register.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,13 @@ class SliderTile extends StatelessWidget {
             ),
           ),
           pageIndex == 2 ? GestureDetector(
-            onTap: (){},
+            onTap: (){
+              Navigator.pushReplacement(
+                context, MaterialPageRoute(
+                  builder: (context) => Register()
+                )
+              );                
+            },
             child: Container(
               margin: EdgeInsets.only(top: 30),
               width: 250,
@@ -48,7 +55,7 @@ class SliderTile extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "Registrasi",
+                  "Daftar",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

@@ -1,5 +1,6 @@
 import 'package:edu_life/components/button_primary.dart';
 import 'package:edu_life/components/main_layout.dart';
+import 'package:edu_life/components/register/register.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -29,11 +30,20 @@ class _LoginScreenState extends State<LoginScreen> {
         body: ListView(
       scrollDirection: Axis.vertical,
       children: <Widget>[
-        SizedBox(height: 50),
+        SizedBox(height: 30),
         Center(
           child: Image.asset(
             "assets/images/logo.png",
-            scale: 12,
+            scale: 6,
+          ),
+        ),
+        SizedBox(height: 5),
+        Center(
+          child: Text(
+            "Edulife",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         SizedBox(height: 70),
@@ -116,7 +126,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.grey[600]),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context, MaterialPageRoute(
+                          builder: (context) => Register()
+                        )
+                      );
+                    },
                     child: Text(
                       "Daftar",
                       style: TextStyle(
