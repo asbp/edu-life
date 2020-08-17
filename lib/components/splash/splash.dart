@@ -54,7 +54,14 @@ class _FirstSplashState extends State<FirstSplash> {
                 padding: EdgeInsets.only(top: 20),
                 child: Image.asset(
                   "assets/images/logo.png",
-                  scale: 12,
+                  scale: 6,
+                ),
+              ),
+              SizedBox(height: 5),
+              Text(
+                "Edulife",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 150),
