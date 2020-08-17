@@ -1,5 +1,6 @@
-import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../../config/constants.dart';
 
 class Header extends StatelessWidget {
   const Header({

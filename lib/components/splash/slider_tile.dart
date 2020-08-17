@@ -1,13 +1,15 @@
-import 'package:edu_life/components/register/register.dart';
-import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../../config/constants.dart';
+import '../register/register.dart';
 
 class SliderTile extends StatelessWidget {
   const SliderTile({
     Key key,
     @required this.img,
     this.title,
-    this.desc, this.pageIndex,
+    this.desc,
+    this.pageIndex,
   }) : super(key: key);
 
   final String img, title, desc;
@@ -37,33 +39,30 @@ class SliderTile extends StatelessWidget {
               style: TextStyle(fontSize: 15),
             ),
           ),
-          pageIndex == 2 ? GestureDetector(
-            onTap: (){
-              Navigator.pushReplacement(
-                context, MaterialPageRoute(
-                  builder: (context) => Register()
-                )
-              );                
-            },
-            child: Container(
-              margin: EdgeInsets.only(top: 30),
-              width: 250,
-              height: 50,
-              decoration: BoxDecoration(
-                color: colorSecondary,
-                borderRadius: BorderRadius.circular(10)
-              ),
-              child: Center(
-                child: Text(
-                  "Daftar",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20
+          pageIndex == 2
+              ? GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Register()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 30),
+                    width: 250,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: colorSecondary,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Center(
+                        child: Text(
+                      "Daftar",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    )),
                   ),
-                )),
-            ),
-          ):Text("")
+                )
+              : Text("")
         ],
       ),
     );

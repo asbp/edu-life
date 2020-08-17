@@ -1,8 +1,9 @@
-import 'package:edu_life/components/forum/forum.dart';
-import 'package:edu_life/components/home/dashboard.dart';
-import 'package:edu_life/components/profile/profile.dart';
-import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../config/constants.dart';
+import 'forum/forum.dart';
+import 'home/dashboard.dart';
+import 'profile/profile.dart';
 
 class Home extends StatefulWidget {
   @override

@@ -1,7 +1,8 @@
-import 'package:edu_life/components/home/header.dart';
-import 'package:edu_life/components/home/home_card_image.dart';
-import 'package:edu_life/components/home/more_submenu.dart';
 import 'package:flutter/material.dart';
+
+import 'header.dart';
+import 'home_card_image.dart';
+import 'more_submenu.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({
