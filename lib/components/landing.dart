@@ -5,6 +5,7 @@ import 'package:edu_life/components/splash/splash.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
+
 class LandingScreen extends StatefulWidget {
   const LandingScreen({Key key, @required this.firstInstall}) : super(key: key);
 
@@ -38,16 +39,25 @@ class _LandingScreenState extends State<LandingScreen> {
             Center(
               child: Image.asset(
                 "assets/images/logo.png",
-                scale: 4,
+                scale: 2,
               ),
             ),
-            SizedBox(height: 300),
+            SizedBox(height: 10),
+            Text(
+              "Edulife",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 28,
+                color: Colors.white
+              ),
+            ),
+            SizedBox(height: 200),
             Center(
                 child: Text(
               "By Edulife Team",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 14,
                   fontWeight: FontWeight.normal),
             ))
           ],
