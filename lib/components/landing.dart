@@ -23,37 +23,39 @@ class _LandingScreenState extends State<LandingScreen> {
         () => widget.firstInstall
             ? Navigator.pushReplacement(
                 context, MaterialPageRoute(builder: (context) => FirstSplash()))
-            : Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => HomeDashboard())));
+            : Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => Home())));
   }
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorPrimary,
       body: Container(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Image.asset("assets/images/logo.png",scale: 3),
-              SizedBox(height: 10,),
-            ],
-          ),
-        )
-      ),
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.all(8.0),
+          child: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Text("EduLife", 
-              style: Theme.of(context).textTheme.subtitle1.merge(TextStyle(color: Theme.of(context).colorScheme.onPrimary)),
-              )
+            Image.asset("assets/images/logo.png", scale: 3),
+            SizedBox(
+              height: 10,
+            ),
           ],
-        )
-      ),
+        ),
+      )),
+      bottomNavigationBar: Container(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text(
+                "EduLife",
+                style: Theme.of(context).textTheme.subtitle1.merge(
+                    TextStyle(color: Theme.of(context).colorScheme.onPrimary)),
+              )
+            ],
+          )),
     );
   }
 }
