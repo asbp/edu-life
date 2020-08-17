@@ -31,7 +31,7 @@ class MoreOfSubMenu extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             onPressed: onHitMore,
             child: Text(
-              "See more",
+              "Lihat semua",
               style: TextStyle(color: Colors.white),
             ),
           )
