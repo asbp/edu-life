@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:edu_life/components/main_layout.dart';
 import 'package:edu_life/components/splash/splash.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'bottom_nav.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({Key key, @required this.firstInstall}) : super(key: key);
@@ -25,7 +25,7 @@ class _LandingScreenState extends State<LandingScreen> {
             ? Navigator.pushReplacement(
                 context, MaterialPageRoute(builder: (context) => FirstSplash()))
             : Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => BottomNavbar())));
+                MaterialPageRoute(builder: (context) => Home())));
   }
 
   @override 

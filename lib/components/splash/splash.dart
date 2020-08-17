@@ -1,9 +1,8 @@
+import 'package:edu_life/components/login/login.dart';
 import 'package:edu_life/components/splash/slider_tile.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:edu_life/config/slider.dart';
 import 'package:flutter/material.dart';
-
-import '../bottom_nav.dart';
 
 class FirstSplash extends StatefulWidget {
   @override
@@ -141,7 +140,7 @@ class _FirstSplashState extends State<FirstSplash> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => BottomNavbar()));
+                              builder: (context) => LoginScreen()));
                     },
                     child: Text(
                       "Login",
