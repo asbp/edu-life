@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:edu_life/components/home/home_dashboard.dart';
+import 'package:edu_life/components/main_layout.dart';
 import 'package:edu_life/components/splash/splash.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class _LandingScreenState extends State<LandingScreen> {
             ? Navigator.pushReplacement(
                 context, MaterialPageRoute(builder: (context) => FirstSplash()))
             : Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => HomeDashboard())));
+                MaterialPageRoute(builder: (context) => Home())));
   }
 
   @override 
