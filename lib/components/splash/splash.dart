@@ -1,8 +1,9 @@
-import 'package:edu_life/components/login/login.dart';
-import 'package:edu_life/components/splash/slider_tile.dart';
-import 'package:edu_life/config/constants.dart';
-import 'package:edu_life/config/slider.dart';
 import 'package:flutter/material.dart';
+
+import '../../config/constants.dart';
+import '../../config/slider.dart';
+import '../login/login.dart';
+import 'slider_tile.dart';
 
 class FirstSplash extends StatefulWidget {
   @override

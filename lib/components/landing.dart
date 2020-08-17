@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:edu_life/components/home/dashboard.dart';
-import 'package:edu_life/components/main_layout.dart';
-import 'package:edu_life/components/splash/splash.dart';
-import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../config/constants.dart';
+import 'main_layout.dart';
+import 'splash/splash.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({Key key, @required this.firstInstall}) : super(key: key);

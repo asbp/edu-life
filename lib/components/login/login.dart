@@ -1,7 +1,7 @@
-import 'package:edu_life/components/button_primary.dart';
-import 'package:edu_life/components/main_layout.dart';
-import 'package:edu_life/components/register/register.dart';
-import 'package:edu_life/config/constants.dart';
+import '../button_primary.dart';
+import '../main_layout.dart';
+import '../register/register.dart';
+import '../../config/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -127,11 +127,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
-                        context, MaterialPageRoute(
-                          builder: (context) => Register()
-                        )
-                      );
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Register()));
                     },
                     child: Text(
                       "Daftar",

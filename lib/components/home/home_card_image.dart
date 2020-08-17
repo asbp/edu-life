@@ -1,10 +1,12 @@
-import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../../config/constants.dart';
 
 class HomeCardImage extends StatelessWidget {
   const HomeCardImage({
     Key key,
-    @required this.img, this.category,
+    @required this.img,
+    this.category,
   }) : super(key: key);
 
   final String img, category;
@@ -15,9 +17,7 @@ class HomeCardImage extends StatelessWidget {
     return Container(
       width: size.width * 0.4,
       margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        boxShadow: darkShadow
-      ),
+      decoration: BoxDecoration(boxShadow: darkShadow),
       child: Stack(
         children: <Widget>[
           Image.asset(img),
@@ -26,10 +26,9 @@ class HomeCardImage extends StatelessWidget {
             child: Text(
               category,
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 20
-              ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             ),
           )
         ],
