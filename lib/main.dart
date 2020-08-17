@@ -1,5 +1,8 @@
 import 'package:edu_life/components/landing.dart';
+import 'package:edu_life/components/login/login.dart';
 import 'package:flutter/material.dart';
+
+import 'components/register/register.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat'
       ),
       home: LandingScreen(firstInstall: true),
+      // home: Register(),
     );
   }
 }
