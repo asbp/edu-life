@@ -20,6 +20,7 @@ class SliderTile extends StatelessWidget {
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Image.asset(img),
           SizedBox(height: 20),

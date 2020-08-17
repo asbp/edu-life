@@ -1,7 +1,9 @@
+import 'package:edu_life/components/onboarding/widget_onboard_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../config/constants.dart';
 import '../../config/slider.dart';
+import '../appbar/widget_appbar_landing.dart';
 import '../login/login.dart';
 import 'slider_tile.dart';
 
@@ -45,35 +47,15 @@ class _FirstSplashState extends State<FirstSplash> {
             currentIdx = value;
           });
         },
-        itemBuilder: (context, idx) {
-          return Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              SizedBox(height: 20),
-              Container(
-                padding: EdgeInsets.only(top: 20),
-                child: Image.asset(
-                  "assets/images/logo.png",
-                  scale: 6,
-                ),
-              ),
-              SizedBox(height: 5),
-              Text(
-                "Edulife",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 150),
-              SliderTile(
-                img: slides[idx].getImage(),
-                title: slides[idx].getTitle(),
-                desc: slides[idx].getDescription(),
-                pageIndex: currentIdx,
-              )
-            ],
-          );
-        },
+        itemBuilder: (context, idx) => OnboardPageViewWidget(
+          context: context,
+          sliderTile: SliderTile(
+            img: slides[idx].getImage(),
+            title: slides[idx].getTitle(),
+            desc: slides[idx].getDescription(),
+            pageIndex: currentIdx,
+          ),
+        ),
       ),
       bottomSheet: currentIdx != slides.length - 1
           ? Container(
@@ -130,7 +112,7 @@ class _FirstSplashState extends State<FirstSplash> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Kamu sudah punya akun ? ",
+                    "Kamu sudah punya akun? ",
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
@@ -144,7 +126,7 @@ class _FirstSplashState extends State<FirstSplash> {
                               builder: (context) => LoginScreen()));
                     },
                     child: Text(
-                      "Login",
+                      "Login di sini.",
                       style: TextStyle(
                           color: colorSecondary,
                           fontWeight: FontWeight.w700,
