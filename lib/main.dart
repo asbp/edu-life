@@ -1,9 +1,6 @@
-import 'package:edu_life/components/home/home_dashboard.dart';
-import 'package:edu_life/components/landing.dart';
-import 'package:edu_life/components/splash/splash.dart';
 import 'package:flutter/material.dart';
 
-import 'components/bottom_nav.dart';
+import 'components/landing.dart';
 
 void main() {
   runApp(MyApp());
