@@ -1,18 +1,17 @@
 import 'package:edu_life/components/forum/forum.dart';
+import 'package:edu_life/components/home/dashboard.dart';
 import 'package:edu_life/components/profile/profile.dart';
+import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../config/constants.dart';
-import 'home/home_dashboard.dart';
-
-class BottomNavbar extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _BottomNavbarState createState() => _BottomNavbarState();
+  _HomeState createState() => _HomeState();
 }
 
-class _BottomNavbarState extends State<BottomNavbar> {
+class _HomeState extends State<Home> {
   int _selectedIndex = 0;
-  
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -24,16 +23,21 @@ class _BottomNavbarState extends State<BottomNavbar> {
   }
 
   Widget getPage() {
-    switch(_selectedIndex) {
-      case 0: return HomeDashboard();
-      case 1: return Forum();
-      case 2: return Profile();
-      default: return HomeDashboard();
+    switch (_selectedIndex) {
+      case 0:
+        return Dashboard();
+      case 1:
+        return Forum();
+      case 2:
+        return Profile();
+      default:
+        return Dashboard();
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    // Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: getPage(),
       bottomNavigationBar: BottomNavigationBar(

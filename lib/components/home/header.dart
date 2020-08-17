@@ -28,8 +28,12 @@ class Header extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Text(
-                    "Hi username !\n",
-                    style: TextStyle(fontSize: 30, color: Colors.white),
+                    "Halo username !\n",
+                    style: TextStyle(
+                      fontSize: 24, 
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                    ),
                   ),
                 ],
               ),
@@ -39,8 +43,8 @@ class Header extends StatelessWidget {
               bottom: size.height * 0.13,
               left: 20,
               child: Text(
-                "Let's start a great day",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                "Mari tingkatakan kualitas diri anda hari ini!",
+                style: TextStyle(fontSize: 16, color: Colors.white),
               )),
           Positioned(
               bottom: 0,
@@ -62,7 +66,7 @@ class Header extends StatelessWidget {
                       child: TextField(
                         onChanged: (value) {},
                         decoration: InputDecoration(
-                            hintText: "Search",
+                            hintText: "Apa yang ingin anda tahu?",
                             hintStyle:
                                 TextStyle(color: Colors.black),
                             enabledBorder: InputBorder.none,

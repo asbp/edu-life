@@ -1,9 +1,8 @@
+import 'package:edu_life/components/login/login.dart';
 import 'package:edu_life/components/splash/slider_tile.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:edu_life/config/slider.dart';
 import 'package:flutter/material.dart';
-
-import '../bottom_nav.dart';
 
 class FirstSplash extends StatefulWidget {
   @override
@@ -54,7 +53,14 @@ class _FirstSplashState extends State<FirstSplash> {
                 padding: EdgeInsets.only(top: 20),
                 child: Image.asset(
                   "assets/images/logo.png",
-                  scale: 12,
+                  scale: 6,
+                ),
+              ),
+              SizedBox(height: 5),
+              Text(
+                "Edulife",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 150),
@@ -134,7 +140,7 @@ class _FirstSplashState extends State<FirstSplash> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => BottomNavbar()));
+                              builder: (context) => LoginScreen()));
                     },
                     child: Text(
                       "Login",
