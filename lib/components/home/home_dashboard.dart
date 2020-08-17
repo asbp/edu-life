@@ -12,7 +12,7 @@ class HomeDashboard extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Header(), 
-            MoreOfSubMenu(subtitle: "Categories", onHitMore: (){}),
+            MoreOfSubMenu(subtitle: "Kategori", onHitMore: (){}),
             Container(
               child: Column(
                 children: <Widget>[

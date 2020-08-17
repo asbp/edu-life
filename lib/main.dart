@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'Montserrat'
+      ),
       home: LandingScreen(firstInstall: true),
       // yg bawah dipake buat testing (langsung ke home page)
       // home:BottomNavbar(),
