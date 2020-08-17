@@ -22,7 +22,7 @@ class _FirstSplashState extends State<FirstSplash> {
       height: isCurrentPage ? 12 : 8,
       width: isCurrentPage ? 12 : 8,
       decoration: BoxDecoration(
-          color: isCurrentPage ? colorPrimary : Colors.grey[500],
+          color: isCurrentPage ? colorSecondary : Colors.grey[500],
           borderRadius: BorderRadius.circular(12)),
     );
   }
@@ -139,7 +139,7 @@ class _FirstSplashState extends State<FirstSplash> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                          color: colorPrimary,
+                          color: colorSecondary,
                           fontWeight: FontWeight.w700,
                           fontSize: 16),
                     ),
