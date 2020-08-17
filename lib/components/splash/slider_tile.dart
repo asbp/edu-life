@@ -43,7 +43,7 @@ class SliderTile extends StatelessWidget {
               width: 250,
               height: 50,
               decoration: BoxDecoration(
-                color: colorPrimary,
+                color: colorSecondary,
                 borderRadius: BorderRadius.circular(10)
               ),
               child: Center(

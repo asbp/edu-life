@@ -34,9 +34,9 @@ List<SliderModel> getSlides() {
   SliderModel slide1 = new SliderModel();
 
   slide1.setImgAsset("assets/images/standing19.png");
-  slide1.setTitle("Tata Krama");
+  slide1.setTitle("Edulife");
   slide1.setDesctiption(
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaa aa aaaaaaaaaaaaaaaa");
+      "Sebuah aplikasi untuk membantu mengembangkan potensi diri dengan mempelajari hal yang belum pernah diajarkan sebelumnya.");
   slides.add(slide1);
 
   SliderModel slide2 = new SliderModel();
@@ -51,8 +51,7 @@ List<SliderModel> getSlides() {
 
   slide3.setImgAsset("assets/images/standing6.png");
   slide3.setTitle("Yuk Mulai Belajar");
-  slide3.setDesctiption(
-      "cc ccccccc cccc ccccccccccccc ccccccccccccc cccccc ccc ccccc");
+  slide3.setDesctiption("Buat akunmu dulu yuk");
   slides.add(slide3);
 
   return slides;
