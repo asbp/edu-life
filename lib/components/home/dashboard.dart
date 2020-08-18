@@ -1,3 +1,4 @@
+import 'package:edu_life/components/home/search_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'header.dart';
@@ -14,7 +15,11 @@ class Dashboard extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          Header(),
+          Header(
+            search: SearchBar(),
+            title: "Halo username !",
+            subtitle: "Mari tingkatakan kualitas diri anda hari ini!",
+          ),
           MoreOfSubMenu(subtitle: "Categories", onHitMore: () {}),
           Container(
             child: Column(
