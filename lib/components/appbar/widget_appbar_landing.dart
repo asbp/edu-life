@@ -23,7 +23,7 @@ class LandingAppBar extends StatelessWidget with PreferredSizeWidget {
             ),
           ),
           Text(
-            "Edulife App",
+            "Edulife",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
           ),
         ],
