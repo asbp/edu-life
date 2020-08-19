@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class DetailCategory extends StatefulWidget {
   final String title;
 
-  const DetailCategory ({ Key key, this.title }): super(key: key);
+  const DetailCategory({Key key, this.title}) : super(key: key);
 
   @override
   _DetailCategoryState createState() => _DetailCategoryState();
@@ -36,6 +36,13 @@ class _DetailCategoryState extends State<DetailCategory> {
               ),
             ],
           ),
+          Positioned(
+              top: 30,
+              child: IconButton(
+                  icon: Icon(Icons.arrow_back_ios),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  })),
           SizedBox.expand(
             child: DraggableScrollableSheet(
               initialChildSize: 0.25,
