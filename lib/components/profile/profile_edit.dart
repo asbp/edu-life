@@ -19,8 +19,7 @@ class _ProfileEditState extends State<ProfileEdit> {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => Profile()));
+              Navigator.pop(context);
             },
           ),
           backgroundColor: Colors.transparent,
