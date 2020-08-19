@@ -1,3 +1,4 @@
+import 'package:edu_life/components/category/details.dart';
 import 'package:edu_life/components/home/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -28,33 +29,75 @@ class Dashboard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     HomeCardImage(
-                        img: "assets/images/bottom_img_2.png",
-                        category: "category 1"),
+                      img: "assets/images/bottom_img_2.png",
+                      category: "category 1",
+                      onClicked: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCategory(title: "category 1",)));
+                      },
+                    ),
                     HomeCardImage(
-                        img: "assets/images/bottom_img_2.png",
-                        category: "category 2"),
+                      img: "assets/images/bottom_img_2.png",
+                      category: "category 2",
+                      onClicked: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCategory(title: "category 2",)));
+                      },
+                    ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     HomeCardImage(
-                        img: "assets/images/bottom_img_2.png",
-                        category: "category 3"),
+                      img: "assets/images/bottom_img_2.png",
+                      category: "category 3",
+                      onClicked: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCategory(title: "category 3",)));
+                      },
+                    ),
                     HomeCardImage(
-                        img: "assets/images/bottom_img_2.png",
-                        category: "category 4"),
+                      img: "assets/images/bottom_img_2.png",
+                      category: "category 4",
+                      onClicked: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCategory(title: "category 4",)));
+                      },
+                    ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     HomeCardImage(
-                        img: "assets/images/bottom_img_2.png",
-                        category: "category 5"),
+                      img: "assets/images/bottom_img_2.png",
+                      category: "category 5",
+                      onClicked: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCategory(title: "category 5",)));
+                      },
+                    ),
                     HomeCardImage(
-                        img: "assets/images/bottom_img_2.png",
-                        category: "category 6"),
+                      img: "assets/images/bottom_img_2.png",
+                      category: "category 6",
+                      onClicked: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCategory(title: "category 6",)));
+                      },
+                    ),
                   ],
                 ),
               ],

@@ -18,12 +18,15 @@ class _ForumState extends State<Forum> {
               height: 150,
               decoration: BoxDecoration(
                 color: colorPrimary,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight:Radius.circular(20)),
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey,
                     blurRadius: 10.0, // has the effect of softening the shadow
-                    spreadRadius: 0.05, // has the effect of extending the shadow
+                    spreadRadius:
+                        0.05, // has the effect of extending the shadow
                     offset: Offset(
                       5.0,
                       5.0,
@@ -34,7 +37,7 @@ class _ForumState extends State<Forum> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.only(left:30, top: 60),
+                    padding: EdgeInsets.only(left: 30, top: 60),
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Forum",
@@ -46,7 +49,7 @@ class _ForumState extends State<Forum> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(left:30, top: 5),
+                    padding: EdgeInsets.only(left: 30, top: 5),
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Bagikan pengalaman anda disini!",
@@ -64,28 +67,25 @@ class _ForumState extends State<Forum> {
               height: 450,
               // children: <Widget>[
               child: ListView.builder(
-                itemBuilder: (BuildContext context, int index){
-                  return Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5),
-                    child: ForumItem(
-                      onClicked: (){},
-                      title: "Title",
-                      username: "Anonymous",
-                    )
-                    );
+                itemBuilder: (BuildContext context, int index) {
+                  return ForumItem(
+                    onClicked: () {},
+                    title: "Title",
+                    username: "Anonymous",
+                  );
                 },
                 itemCount: 100,
               ),
               // ],
-            ),  
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-          child: Icon(Icons.add),
-          backgroundColor: colorPrimary,
-      ),    
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: colorPrimary,
+      ),
     );
   }
 }
