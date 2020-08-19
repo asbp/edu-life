@@ -1,6 +1,4 @@
 import 'package:edu_life/components/forum/forum_item.dart';
-import 'package:edu_life/components/home/header.dart';
-import 'package:edu_life/components/home/search_bar.dart';
 import 'package:edu_life/config/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -13,65 +11,81 @@ class _ForumState extends State<Forum> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          body: ListView(
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-          Header(
-            search: SearchBar(),
-            title: "Forum",
-            subtitle: "Bagikan Pengalaman kamu!",
-          ),
-          Column(
-            children: <Widget>[
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 1",
-                username: "user 1",
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: 150,
+              decoration: BoxDecoration(
+                color: colorPrimary,
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight:Radius.circular(20)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 10.0, // has the effect of softening the shadow
+                    spreadRadius: 0.05, // has the effect of extending the shadow
+                    offset: Offset(
+                      5.0,
+                      5.0,
+                    ),
+                  )
+                ],
               ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 2",
-                username: "user 2",
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(left:30, top: 60),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Forum",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left:30, top: 5),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Bagikan pengalaman anda disini!",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 3",
-                username: "user 2",
+            ),
+            Container(
+              // padding: const EdgeInsets.only(left: 30, top: 25, right: 30),
+              height: 450,
+              // children: <Widget>[
+              child: ListView.builder(
+                itemBuilder: (BuildContext context, int index){
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: ForumItem(
+                      onClicked: (){},
+                      title: "Title",
+                      username: "Anonymous",
+                    )
+                    );
+                },
+                itemCount: 100,
               ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 4",
-                username: "user 3",
-              ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 5",
-                username: "user 1",
-              ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 6",
-                username: "anonymous",
-              ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 7",
-                username: "anonymous",
-              ),
-              ForumItem(
-                onClicked: (){},
-                title: "Judul 8",
-                username: "user 5",
-              ),
-            ],
-          ),
-        ],
+              // ],
+            ),  
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
-        child: Icon(Icons.add),
-        backgroundColor: colorPrimary,
-      ),
+          child: Icon(Icons.add),
+          backgroundColor: colorPrimary,
+      ),    
     );
   }
 }

@@ -23,7 +23,7 @@ class OnboardPageViewWidget extends StatelessWidget {
           ),
           SizedBox(height: 5),
           Text(
-            "Edulife App",
+            "Edulife",
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),

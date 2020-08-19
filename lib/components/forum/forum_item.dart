@@ -14,11 +14,11 @@ class ForumItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onClicked,
+    return Container(
+      // onTap: onClicked,
       child: Container(
         padding: EdgeInsets.all(15),
-        margin: EdgeInsets.fromLTRB(25, 0, 25, 15),
+        margin: const EdgeInsets.only(left: 30, top: 5, right: 30),
         decoration: BoxDecoration(
             // border: Border.all(width: 1, color: Colors.black),
             color: colorSmallComponent,
