@@ -1,3 +1,4 @@
+import 'package:edu_life/components/main_layout.dart';
 import 'package:flutter/material.dart';
 import '../../config/constants.dart';
 import 'profile.dart';
@@ -19,7 +20,12 @@ class _ProfileEditState extends State<ProfileEdit> {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home()
+                )
+              );
             },
           ),
           backgroundColor: Colors.transparent,

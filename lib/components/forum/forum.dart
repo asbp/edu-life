@@ -62,21 +62,22 @@ class _ForumState extends State<Forum> {
             Container(
               // padding: const EdgeInsets.only(left: 30, top: 25, right: 30),
               height: 450,
+              // children: <Widget>[
               child: ListView.builder(
-              itemBuilder: (BuildContext context, int index){
-                return Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  child: ForumItem(
-                    onClicked: (){},
-                    title: "Title",
-                    username: "Anonymous",
-                  )
-                  );
-              },
-              itemCount: 100,
-            ),
+                itemBuilder: (BuildContext context, int index){
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: ForumItem(
+                      onClicked: (){},
+                      title: "Title",
+                      username: "Anonymous",
+                    )
+                    );
+                },
+                itemCount: 100,
+              ),
+              // ],
             ),  
-            
           ],
         ),
       ),
