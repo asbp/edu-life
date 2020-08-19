@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../config/constants.dart';
+import '../../../constants/constant_main.dart';
 
-class MoreOfSubMenu extends StatelessWidget {
-  const MoreOfSubMenu({
+class MoreOfSubMenuWidget extends StatelessWidget {
+  const MoreOfSubMenuWidget({
     Key key,
     this.subtitle,
     this.onHitMore,

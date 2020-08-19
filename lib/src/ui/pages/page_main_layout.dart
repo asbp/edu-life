@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../config/constants.dart';
-import 'forum/forum.dart';
-import 'home/dashboard.dart';
-import 'profile/profile.dart';
+import '../../constants/constant_main.dart';
+import 'forum/page_forum_dashboard.dart';
+import 'home/page_home_dashboard.dart';
+import 'profile/page_profile_dashboard.dart';
 
-class Home extends StatefulWidget {
+class HomeMainLayoutPage extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<HomeMainLayoutPage> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -26,13 +26,13 @@ class _HomeState extends State<Home> {
   Widget getPage() {
     switch (_selectedIndex) {
       case 0:
-        return Dashboard();
+        return HomeDashboardPage();
       case 1:
-        return Forum();
+        return ForumDashbardPage();
       case 2:
-        return Profile();
+        return ProfilePage();
       default:
-        return Dashboard();
+        return HomeDashboardPage();
     }
   }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../config/constants.dart';
+import '../../../constants/constant_main.dart';
 
 class ButtonPrimary extends StatelessWidget {
   const ButtonPrimary({

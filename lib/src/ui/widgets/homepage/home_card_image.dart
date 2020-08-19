@@ -1,9 +1,8 @@
+import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
 
-import '../../config/constants.dart';
-
-class HomeCardImage extends StatelessWidget {
-  const HomeCardImage({
+class HomeCardImageWidget extends StatelessWidget {
+  const HomeCardImageWidget({
     Key key,
     @required this.img,
     this.category,

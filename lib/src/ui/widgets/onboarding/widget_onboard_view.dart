@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 
-import '../splash/slider_tile.dart';
+import '../widget_slider_tile.dart';
 
 class OnboardPageViewWidget extends StatelessWidget {
   final BuildContext context;
-  final SliderTile sliderTile;
+  final SliderTileWidget sliderTile;
 
   const OnboardPageViewWidget({this.context, this.sliderTile});
 

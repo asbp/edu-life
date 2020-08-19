@@ -1,18 +1,17 @@
-import 'package:edu_life/components/onboarding/widget_onboard_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../config/constants.dart';
-import '../../config/slider.dart';
-import '../appbar/widget_appbar_landing.dart';
-import '../login/login.dart';
-import 'slider_tile.dart';
+import '../../constants/constant_main.dart';
+import '../../models/model_slider.dart';
+import '../widgets/onboarding/widget_onboard_view.dart';
+import '../widgets/widget_slider_tile.dart';
+import 'login/page_login_home.dart';
 
-class FirstSplash extends StatefulWidget {
+class OnboardingPage extends StatefulWidget {
   @override
   _FirstSplashState createState() => _FirstSplashState();
 }
 
-class _FirstSplashState extends State<FirstSplash> {
+class _FirstSplashState extends State<OnboardingPage> {
   List<SliderModel> slides = new List<SliderModel>();
   int currentIdx = 0;
 
@@ -49,7 +48,7 @@ class _FirstSplashState extends State<FirstSplash> {
         },
         itemBuilder: (context, idx) => OnboardPageViewWidget(
           context: context,
-          sliderTile: SliderTile(
+          sliderTile: SliderTileWidget(
             img: slides[idx].getImage(),
             title: slides[idx].getTitle(),
             desc: slides[idx].getDescription(),
@@ -120,10 +119,8 @@ class _FirstSplashState extends State<FirstSplash> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     child: Text(
                       "Login di sini.",

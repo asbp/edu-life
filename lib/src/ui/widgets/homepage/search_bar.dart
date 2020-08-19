@@ -1,4 +1,4 @@
-import 'package:edu_life/config/constants.dart';
+import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {
@@ -20,8 +20,7 @@ class SearchBar extends StatelessWidget {
           decoration: BoxDecoration(
               color: colorSmallComponent,
               borderRadius: BorderRadius.circular(25),
-              boxShadow: darkShadow
-          ),
+              boxShadow: darkShadow),
           child: Row(
             children: <Widget>[
               Expanded(
@@ -29,8 +28,7 @@ class SearchBar extends StatelessWidget {
                   onChanged: (value) {},
                   decoration: InputDecoration(
                       hintText: "Apa yang ingin anda tahu?",
-                      hintStyle:
-                          TextStyle(color: Colors.black),
+                      hintStyle: TextStyle(color: Colors.black),
                       enabledBorder: InputBorder.none,
                       focusedBorder: InputBorder.none),
                 ),

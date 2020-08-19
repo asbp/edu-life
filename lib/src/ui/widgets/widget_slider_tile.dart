@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../config/constants.dart';
-import '../register/register.dart';
+import '../../constants/constant_main.dart';
+import '../pages/register/page_register.dart';
 
-class SliderTile extends StatelessWidget {
-  const SliderTile({
+class SliderTileWidget extends StatelessWidget {
+  const SliderTileWidget({
     Key key,
     @required this.img,
     this.title,
@@ -43,8 +43,10 @@ class SliderTile extends StatelessWidget {
           pageIndex == 2
               ? GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Register()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegisterPage()));
                   },
                   child: Container(
                     margin: EdgeInsets.only(top: 30),

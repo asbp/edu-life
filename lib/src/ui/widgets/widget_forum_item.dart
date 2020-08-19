@@ -1,8 +1,8 @@
-import 'package:edu_life/config/constants.dart';
+import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
 
-class ForumItem extends StatelessWidget {
-  const ForumItem({
+class ForumItemWidget extends StatelessWidget {
+  const ForumItemWidget({
     Key key,
     this.onClicked,
     this.title,

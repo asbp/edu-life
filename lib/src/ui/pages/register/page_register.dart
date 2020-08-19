@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../config/constants.dart';
-import '../button_primary.dart';
-import '../login/login.dart';
-import '../main_layout.dart';
+import '../../../constants/constant_main.dart';
+import '../../widgets/buttons/button_primary.dart';
+import '../login/page_login_home.dart';
+import '../page_main_layout.dart';
 
-class Register extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   @override
   _RegisterState createState() => _RegisterState();
 }
 
-class _RegisterState extends State<Register> {
+class _RegisterState extends State<RegisterPage> {
   bool _obscureText = true;
   // Toggles the password show status
   void _toggle() {
@@ -121,8 +121,10 @@ class _RegisterState extends State<Register> {
                   ButtonPrimary(
                       text: "Daftar",
                       onClick: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) => Home()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeMainLayoutPage()));
                       }),
                   SizedBox(height: 10),
                   Row(
@@ -140,7 +142,7 @@ class _RegisterState extends State<Register> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => LoginScreen()));
+                                  builder: (context) => LoginPage()));
                         },
                         child: Text(
                           "Login",

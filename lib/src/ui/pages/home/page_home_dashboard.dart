@@ -1,12 +1,12 @@
-import 'package:edu_life/components/home/search_bar.dart';
 import 'package:flutter/material.dart';
 
-import 'header.dart';
-import 'home_card_image.dart';
-import 'more_submenu.dart';
+import '../../widgets/homepage/home_card_image.dart';
+import '../../widgets/homepage/more_submenu.dart';
+import '../../widgets/homepage/search_bar.dart';
+import '../../widgets/homepage/widget_home_header.dart';
 
-class Dashboard extends StatelessWidget {
-  const Dashboard({
+class HomeDashboardPage extends StatelessWidget {
+  const HomeDashboardPage({
     Key key,
   }) : super(key: key);
 
@@ -15,22 +15,22 @@ class Dashboard extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          Header(
+          HomeHeaderWidget(
             search: SearchBar(),
             title: "Halo username !",
             subtitle: "Mari tingkatakan kualitas diri anda hari ini!",
           ),
-          MoreOfSubMenu(subtitle: "Categories", onHitMore: () {}),
+          MoreOfSubMenuWidget(subtitle: "Categories", onHitMore: () {}),
           Container(
             child: Column(
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    HomeCardImage(
+                    HomeCardImageWidget(
                         img: "assets/images/bottom_img_2.png",
                         category: "category 1"),
-                    HomeCardImage(
+                    HomeCardImageWidget(
                         img: "assets/images/bottom_img_2.png",
                         category: "category 2"),
                   ],
@@ -38,10 +38,10 @@ class Dashboard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    HomeCardImage(
+                    HomeCardImageWidget(
                         img: "assets/images/bottom_img_2.png",
                         category: "category 3"),
-                    HomeCardImage(
+                    HomeCardImageWidget(
                         img: "assets/images/bottom_img_2.png",
                         category: "category 4"),
                   ],
@@ -49,10 +49,10 @@ class Dashboard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    HomeCardImage(
+                    HomeCardImageWidget(
                         img: "assets/images/bottom_img_2.png",
                         category: "category 5"),
-                    HomeCardImage(
+                    HomeCardImageWidget(
                         img: "assets/images/bottom_img_2.png",
                         category: "category 6"),
                   ],

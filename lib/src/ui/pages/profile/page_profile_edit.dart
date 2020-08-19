@@ -1,14 +1,14 @@
-import 'package:edu_life/components/main_layout.dart';
+import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
-import '../../config/constants.dart';
-import 'profile.dart';
 
-class ProfileEdit extends StatefulWidget {
+import '../page_main_layout.dart';
+
+class ProfileEditPage extends StatefulWidget {
   @override
   _ProfileEditState createState() => _ProfileEditState();
 }
 
-class _ProfileEditState extends State<ProfileEdit> {
+class _ProfileEditState extends State<ProfileEditPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,11 +21,9 @@ class _ProfileEditState extends State<ProfileEdit> {
             ),
             onPressed: () {
               Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Home()
-                )
-              );
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => HomeMainLayoutPage()));
             },
           ),
           backgroundColor: Colors.transparent,

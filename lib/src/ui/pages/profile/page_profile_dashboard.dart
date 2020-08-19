@@ -1,17 +1,17 @@
-import 'package:edu_life/components/profile/profile_edit.dart';
+import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/ui/pages/profile/page_profile_edit.dart';
 import 'package:flutter/material.dart';
-import '../../config/constants.dart';
 
-class Profile extends StatefulWidget {
+class ProfilePage extends StatefulWidget {
   @override
   _ProfileState createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+        body: SingleChildScrollView(
       child: Column(
         children: <Widget>[
           SizedBox(height: 50),
@@ -44,13 +44,12 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                     Text(
-                        "POST",
-                        style: TextStyle(
+                      "POST",
+                      style: TextStyle(
                           fontSize: 13,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
-                      ),
-                    
+                    ),
                     SizedBox(height: 5),
                     FlatButton(
                       color: colorPrimary,
@@ -60,7 +59,7 @@ class _ProfileState extends State<Profile> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ProfileEdit()));
+                                builder: (context) => ProfileEditPage()));
                       },
                       child: Text(
                         "\tPengaturan\t",
@@ -78,24 +77,24 @@ class _ProfileState extends State<Profile> {
           Padding(
             padding: EdgeInsets.only(left: 35),
             child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Post",
-                style: TextStyle(
-                  fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
-              )
-            ),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Post",
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                )),
           ),
           SizedBox(height: 20),
           Container(
-            height: 450,
-            child: ListView.builder(
-                itemCount: 100,
-                itemBuilder: (context, index){
-                  return cardPost('Bentuk Pertanyaan/Response', 'by: Username');
-                } 
-              )
-          ),
+              height: 450,
+              child: ListView.builder(
+                  itemCount: 100,
+                  itemBuilder: (context, index) {
+                    return cardPost(
+                        'Bentuk Pertanyaan/Response', 'by: Username');
+                  })),
 
           // cardPost('Bentuk Pertanyaan/Response', 'by:Username'),
           // cardPost('Bentuk Pertanyaan/Response', 'by:Username'),
@@ -105,9 +104,7 @@ class _ProfileState extends State<Profile> {
           // cardPost('Bentuk Pertanyaan/Response', 'by:Username'),
         ],
       ),
-    )
-    );
-    
+    ));
   }
 }
 

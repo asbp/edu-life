@@ -1,19 +1,20 @@
-import '../button_primary.dart';
-import '../main_layout.dart';
-import '../register/register.dart';
-import '../../config/constants.dart';
+import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/ui/pages/register/page_register.dart';
+import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
+
+import '../page_main_layout.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<LoginPage> {
   void _doLogin() {
     /* TODO: IMPLEMENTS LOGIC */
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => Home()));
+        context, MaterialPageRoute(builder: (context) => HomeMainLayoutPage()));
   }
 
   bool _obscureText = true;
@@ -119,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Belum memiliki akun ? ",
+                    "Belum memiliki akun? ",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
@@ -127,8 +128,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => Register()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterPage()));
                     },
                     child: Text(
                       "Daftar",

@@ -1,10 +1,9 @@
-import 'package:edu_life/components/home/search_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../config/constants.dart';
+import '../../../constants/constant_main.dart';
 
-class Header extends StatelessWidget {
-  const Header({
+class HomeHeaderWidget extends StatelessWidget {
+  const HomeHeaderWidget({
     Key key,
     this.search,
     this.title,

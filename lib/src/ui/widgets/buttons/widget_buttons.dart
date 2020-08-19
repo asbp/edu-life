@@ -4,7 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'widget_boolean_builder.dart';
+import '../widget_boolean_builder.dart';
 
 class MyButton extends StatelessWidget {
   final String caption;
@@ -15,8 +15,7 @@ class MyButton extends StatelessWidget {
   final double buttonWidth;
   final double buttonHeight;
   int _buttonType;
-  bool _isOutline = false,
-      _isLink = false;
+  bool _isOutline = false, _isLink = false;
 
   static const _BUTTON_TYPE_ERROR = 1;
   static const _BUTTON_TYPE_PRIMARY = 2;
@@ -30,67 +29,68 @@ class MyButton extends StatelessWidget {
 
   MyButton.error(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 1;
   }
 
-  MyButton.link({@required this.caption,
-    this.buttonWidth = 88.0,
-    this.buttonHeight = 48.0,
-    @required this.onTap}) {
+  MyButton.link(
+      {@required this.caption,
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._isLink = true;
   }
 
   MyButton.primary(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 2;
   }
 
   MyButton.secondary(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 3;
   }
 
   MyButton.flat(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 4;
     this._isOutline = true;
   }
 
   MyButton.flatPrimary(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 5;
     this._isOutline = true;
   }
 
   MyButton.flatSecondary(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 6;
     this._isOutline = true;
   }
 
   MyButton.flatError(
       {@required this.caption,
-        this.buttonWidth = 88.0,
-        this.buttonHeight = 48.0,
-        @required this.onTap}) {
+      this.buttonWidth = 88.0,
+      this.buttonHeight = 48.0,
+      @required this.onTap}) {
     this._buttonType = 7;
     this._isOutline = true;
   }
@@ -161,8 +161,7 @@ class MyButton extends StatelessWidget {
                   new TextSpan(
                       text: caption,
                       style: new TextStyle(color: appTheme.colorScheme.primary),
-                      recognizer: new TapGestureRecognizer()
-                        ..onTap = onTap),
+                      recognizer: new TapGestureRecognizer()..onTap = onTap),
                 ],
               ),
             ),
@@ -170,8 +169,6 @@ class MyButton extends StatelessWidget {
               minWidth: buttonWidth,
               height: buttonHeight,
               child: _buttonShape,
-            )
-        )
-    );
+            )));
   }
 }
