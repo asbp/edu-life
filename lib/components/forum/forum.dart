@@ -13,7 +13,7 @@ class _ForumState extends State<Forum> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          body: ListView(
+      body: ListView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
           Header(
@@ -24,42 +24,42 @@ class _ForumState extends State<Forum> {
           Column(
             children: <Widget>[
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 1",
                 username: "user 1",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 2",
                 username: "user 2",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 3",
                 username: "user 2",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 4",
                 username: "user 3",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 5",
                 username: "user 1",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 6",
                 username: "anonymous",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 7",
                 username: "anonymous",
               ),
               ForumItem(
-                onClicked: (){},
+                onClicked: () {},
                 title: "Judul 8",
                 username: "user 5",
               ),
@@ -68,11 +68,10 @@ class _ForumState extends State<Forum> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: () {},
         child: Icon(Icons.add),
         backgroundColor: colorPrimary,
       ),
     );
   }
 }
-
