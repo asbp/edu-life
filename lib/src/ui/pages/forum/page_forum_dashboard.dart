@@ -25,9 +25,9 @@ class _ForumState extends State<ForumDashbardPage> {
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey,
-                    blurRadius: 10.0, // has the effect of softening the shadow
+                    blurRadius: 10.0, // has the effect of softening the shadow.
                     spreadRadius:
-                        0.05, // has the effect of extending the shadow
+                        0.05, // has the effect of extending the shadow.
                     offset: Offset(
                       5.0,
                       5.0,
