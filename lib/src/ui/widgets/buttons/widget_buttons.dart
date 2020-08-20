@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -106,7 +107,7 @@ class MyButton extends StatelessWidget {
         this.textColor = appTheme.colorScheme.onError;
         break;
       case _BUTTON_TYPE_PRIMARY:
-        this.buttonColor = appTheme.colorScheme.primary;
+        this.buttonColor = colorPrimary;
         this.textColor = appTheme.colorScheme.onPrimary;
         break;
       case _BUTTON_TYPE_SECONDARY:
