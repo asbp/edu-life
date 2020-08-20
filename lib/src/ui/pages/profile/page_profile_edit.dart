@@ -1,4 +1,5 @@
 import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/ui/widgets/buttons/flat_button_primary.dart';
 import 'package:flutter/material.dart';
 
 import '../page_main_layout.dart';
@@ -131,28 +132,11 @@ class _ProfileEditState extends State<ProfileEditPage> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  FlatButton(
-                    color: colorPrimary,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {},
-                    child: Text(
-                      "\tUbah Data\t",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  FlatButton(
-                    color: colorPrimary,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {},
-                    child: Text(
-                      "\tUbah Password\t",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                  PrimaryFlatButton(onClicked: (){}, text: "Ubah Data",),
+                  PrimaryFlatButton(onClicked: (){}, text: "Ubah Password",),
                 ])
           ],
         ));
   }
 }
+
