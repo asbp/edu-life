@@ -1,4 +1,4 @@
-import 'package:edu_life/components/category/details.dart';
+import 'package:edu_life/src/ui/pages/category/page_detail_category.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/homepage/home_card_image.dart';

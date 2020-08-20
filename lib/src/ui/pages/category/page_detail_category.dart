@@ -1,5 +1,5 @@
-import 'package:edu_life/components/forum/forum_item.dart';
 import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/ui/widgets/widget_forum_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailCategory extends StatefulWidget {
@@ -84,27 +84,27 @@ class _DetailCategoryState extends State<DetailCategory> {
                               fontSize: 16),
                         ),
                       ),
-                      ForumItem(
+                      ForumItemWidget(
                         title: "title 1",
                         username: "author1",
                         onClicked: () {},
                       ),
-                      ForumItem(
+                      ForumItemWidget(
                         title: "title 2",
                         username: "author2",
                         onClicked: () {},
                       ),
-                      ForumItem(
+                      ForumItemWidget(
                         title: "title 3",
                         username: "author1",
                         onClicked: () {},
                       ),
-                      ForumItem(
+                      ForumItemWidget(
                         title: "title 4",
                         username: "author3",
                         onClicked: () {},
                       ),
-                      ForumItem(
+                      ForumItemWidget(
                         title: "title 4",
                         username: "author4",
                         onClicked: () {},
