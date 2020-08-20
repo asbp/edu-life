@@ -1,3 +1,4 @@
+import 'package:edu_life/src/ui/pages/thread/thread.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/constant_main.dart';
@@ -12,8 +13,7 @@ class _ForumState extends State<ForumDashbardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
+      body: Column(
           children: <Widget>[
             Container(
               height: 150,
@@ -65,17 +65,29 @@ class _ForumState extends State<ForumDashbardPage> {
             ),
             Container(
               // padding: const EdgeInsets.only(left: 30, top: 25, right: 30),
-              height: 450,
+              height: 460,
               // children: <Widget>[
               child: ListView.builder(
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
                       padding: EdgeInsets.symmetric(vertical: 5),
-                      child: ForumItemWidget(
-                        onClicked: () {},
-                        title: "Title",
-                        username: "Anonymous",
-                      ));
+                      child: GestureDetector(
+                        onTap: (){
+                          print("klik");
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Thread()
+                            ) 
+                          );
+                        },
+                        child: ForumItemWidget(
+                          onClicked: () {},
+                          title: "Title",
+                          username: "Anonymous",
+                      )
+                      )
+                    );
                 },
                 itemCount: 100,
               ),
@@ -83,7 +95,6 @@ class _ForumState extends State<ForumDashbardPage> {
             ),
           ],
         ),
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.add),

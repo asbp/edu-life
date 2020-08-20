@@ -39,7 +39,7 @@ dependencies:
   cookie_jar: ^1.0.0
   sqflite: ^1.2.0
   flutter_phoenix: ^0.1.0
-  flutter_secure_storage: ^3.3.1+1
+  # flutter_secure_storage: ^3.3.3
   equatable: ^1.1.0
   bloc: ^3.0.0
   flutter_bloc: ^3.2.0
