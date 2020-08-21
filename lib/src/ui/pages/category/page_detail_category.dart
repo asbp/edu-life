@@ -16,13 +16,24 @@ class _DetailCategoryState extends State<DetailCategory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          color: Colors.black87,
+        ),
+      ),
       body: Stack(
         children: <Widget>[
           Column(
             children: <Widget>[
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.fromLTRB(20, 50, 20, 50),
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -37,21 +48,14 @@ class _DetailCategoryState extends State<DetailCategory> {
               ),
             ],
           ),
-          Positioned(
-              top: 30,
-              child: IconButton(
-                  icon: Icon(Icons.arrow_back_ios),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  })),
           SizedBox.expand(
             child: DraggableScrollableSheet(
               initialChildSize: 0.25,
               minChildSize: 0.22,
-              maxChildSize: 0.7,
+              maxChildSize: 0.76,
               builder: (BuildContext ctx, s) {
                 return Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   decoration: BoxDecoration(
                       color: colorPrimary,
                       borderRadius: BorderRadius.only(

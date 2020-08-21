@@ -15,7 +15,7 @@ class ButtonPrimary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       onPressed: onClick,
       color: colorSecondary,
       child: Container(
@@ -26,7 +26,8 @@ class ButtonPrimary extends StatelessWidget {
             text,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
             ),
           ),
         ),
