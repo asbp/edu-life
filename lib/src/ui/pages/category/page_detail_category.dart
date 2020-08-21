@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/models/category.dart';
+import 'package:edu_life/src/ui/pages/category/page_detail_article.dart';
 import 'package:edu_life/src/ui/widgets/widget_forum_item.dart';
 import 'package:flutter/material.dart';
 
@@ -12,16 +16,37 @@ class DetailCategory extends StatefulWidget {
 }
 
 class _DetailCategoryState extends State<DetailCategory> {
+
+  List<Category> parseJson(String response) {
+    if (response == null) {
+      return [];
+    }
+    final parsed = json.decode(response.toString()).cast();
+    
+    return parsed.map<Category>((json) => new Category.fromJson(json)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          color: Colors.black87,
+        ),
+      ),
       body: Stack(
         children: <Widget>[
           Column(
             children: <Widget>[
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.fromLTRB(20, 50, 20, 50),
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -36,21 +61,14 @@ class _DetailCategoryState extends State<DetailCategory> {
               ),
             ],
           ),
-          Positioned(
-              top: 30,
-              child: IconButton(
-                  icon: Icon(Icons.arrow_back_ios),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  })),
           SizedBox.expand(
             child: DraggableScrollableSheet(
               initialChildSize: 0.25,
               minChildSize: 0.22,
-              maxChildSize: 0.7,
+              maxChildSize: 0.76,
               builder: (BuildContext ctx, s) {
                 return Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   decoration: BoxDecoration(
                       color: colorPrimary,
                       borderRadius: BorderRadius.only(
@@ -84,30 +102,32 @@ class _DetailCategoryState extends State<DetailCategory> {
                               fontSize: 16),
                         ),
                       ),
-                      ForumItemWidget(
-                        title: "title 1",
-                        username: "author1",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 2",
-                        username: "author2",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 3",
-                        username: "author1",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 4",
-                        username: "author3",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 4",
-                        username: "author4",
-                        onClicked: () {},
+                      FutureBuilder(
+                        future: DefaultAssetBundle.of(context).loadString(
+                            "assets/json/article_${widget.title}.json"),
+                        builder: (context, snapshot) {
+                          List<Category> categories =
+                              parseJson(snapshot.data.toString());
+                          // return Text(categories[0].author);
+                          return Container(
+                            height: 500,
+                            child: ListView.builder(
+                                itemCount: categories.length,
+                                itemBuilder: (context, index) {
+                                  return ForumItemWidget(
+                                    title: categories[index].title,
+                                    username: categories[index].author,
+                                    onClicked: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailArticle(categories: categories, idx: index,)));
+                                    },
+                                  );
+                                }),
+                          );
+                        },
                       ),
                     ],
                   ),

@@ -16,6 +16,7 @@ class HomeHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Container(
       margin: EdgeInsets.only(bottom: 50),
       height: title == "Forum" ? size.height * 0.3 : size.height * 0.35,
@@ -31,8 +32,7 @@ class HomeHeaderWidget extends StatelessWidget {
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20))),
             child: Container(
-              margin:
-                  EdgeInsets.only(left: 20, top: title == "Forum" ? 10 : 30),
+              margin: EdgeInsets.only(left: 20),
               child: Row(
                 children: <Widget>[
                   Text(
@@ -47,11 +47,13 @@ class HomeHeaderWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-              bottom: title == "Forum" ? size.height * 0.1 : size.height * 0.13,
+              bottom: title == "Forum" ? size.height * 0.1 : size.height * 0.14,
               left: 20,
-              child: Text(
-                subtitle,
-                style: TextStyle(fontSize: 16, color: Colors.white),
+              child: Container(
+                child: Text(
+                  subtitle,
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
               )),
           search
         ],

@@ -104,6 +104,7 @@ class _LoginScreenState extends State<LoginPage> {
                     onPressed: () {
                       _toggle();
                     })),
+            obscureText: _obscureText,
           ),
         ),
         SizedBox(height: 50),
