@@ -1,3 +1,4 @@
+import 'package:edu_life/src/ui/pages/category/page_detail_category.dart';
 import 'package:edu_life/src/ui/widgets/homepage/widget_home_category_item.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +20,17 @@ class _HomeCatGridState extends State<HomepageCategoryGridView> {
       padding: EdgeInsets.all(20),
       children: List.generate(10, (index) {
         return HomeCategoryItemWidget(
-            caption: "Kategori $index",
-            image: AssetImage("assets/images/bottom_img_2.png"));
+          caption: "Kategori $index",
+          image: AssetImage("assets/images/bottom_img_2.png"),
+          onClick: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => DetailCategory(
+                          title: "Kategori $index",
+                        )));
+          },
+        );
       }),
     );
   }
