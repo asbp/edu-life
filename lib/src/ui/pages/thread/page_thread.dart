@@ -42,12 +42,12 @@ class _ThreadState extends State<ThreadPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Username",
+                        "Nama pengguna",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        "Date created",
+                        "Tanggal dibuat",
                       )
                     ],
                   ),
