@@ -1,4 +1,5 @@
 import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/ui/pages/category/page_detail_article.dart';
 import 'package:edu_life/src/ui/widgets/widget_forum_item.dart';
 import 'package:flutter/material.dart';
 
@@ -87,7 +88,12 @@ class _DetailCategoryState extends State<DetailCategory> {
                       ForumItemWidget(
                         title: "title 1",
                         username: "author1",
-                        onClicked: () {},
+                        onClicked: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailArticle()));
+                        },
                       ),
                       ForumItemWidget(
                         title: "title 2",
