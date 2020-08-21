@@ -12,6 +12,7 @@ class HomeMainLayoutPage extends StatefulWidget {
 
 class _HomeState extends State<HomeMainLayoutPage> {
   int _selectedIndex = 0;
+  int currentIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -19,28 +20,30 @@ class _HomeState extends State<HomeMainLayoutPage> {
     });
   }
 
-  initState() {
+  List<Widget> pageList = List<Widget>();
+
+  @override
+  void initState(){
+    pageList.add(HomeDashboardPage());
+    pageList.add(ForumDashbardPage());
+    pageList.add(ProfilePage());
     super.initState();
   }
 
-  Widget getPage() {
-    switch (_selectedIndex) {
-      case 0:
-        return HomeDashboardPage();
-      case 1:
-        return ForumDashbardPage();
-      case 2:
-        return ProfilePage();
-      default:
-        return HomeDashboardPage();
-    }
-  }
+  final _pageOptions = [
+    HomeDashboardPage(),
+    ForumDashbardPage(),
+    ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: getPage(),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pageOptions,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
@@ -57,13 +60,15 @@ class _HomeState extends State<HomeMainLayoutPage> {
             title: Text('Profile'),
           ),
         ],
-        currentIndex: _selectedIndex,
+        
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.white,
         backgroundColor: colorPrimary,
         iconSize: 30,
-        onTap: _onItemTapped,
         elevation: 0.0,
+        onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
+        
       ),
     );
   }

@@ -39,7 +39,7 @@ class _LandingScreenState extends State<SplashscreenPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Image.asset("assets/images/logo.png", scale: 2),
+            Image.asset("assets/images/logo.png", scale: 8),
             SizedBox(
               height: 10,
             ),
