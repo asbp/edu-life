@@ -69,9 +69,7 @@ class _ForumState extends State<ForumDashbardPage> {
               // children: <Widget>[
               child: ListView.builder(
                 itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5),
-                      child: GestureDetector(
+                  return GestureDetector(
                         onTap: (){
                           print("klik");
                           Navigator.pushReplacement(
@@ -82,11 +80,18 @@ class _ForumState extends State<ForumDashbardPage> {
                           );
                         },
                         child: ForumItemWidget(
-                          onClicked: () {},
+                          onClicked: () {
+                            Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Thread()
+                            ) 
+                          );
+                          },
                           title: "Title",
                           username: "Anonymous",
                       )
-                      )
+                      
                     );
                 },
                 itemCount: 100,
