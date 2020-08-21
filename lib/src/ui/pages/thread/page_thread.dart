@@ -1,13 +1,14 @@
 import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
+import 'package:edu_life/src/ui/widgets/forum/widget_thread_user_box.dart';
 import 'package:edu_life/src/ui/widgets/widget_forum_response.dart';
 import 'package:flutter/material.dart';
 
-class Thread extends StatefulWidget {
+class ThreadPage extends StatefulWidget {
   @override
   _ThreadState createState() => _ThreadState();
 }
 
-class _ThreadState extends State<Thread> {
+class _ThreadState extends State<ThreadPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,26 +32,10 @@ class _ThreadState extends State<Thread> {
           ),
           SizedBox(height: 20),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              CircleAvatar(),
-              SizedBox(
-                width: 20,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Username",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "Date created",
-                  )
-                ],
-              ),
-              SizedBox(
-                width: 160,
-              ),
+              ThreadUserBoxWidget(
+                  username: "Pengguna", dateCreated: "1 Januari 2000 10:10:10"),
               IconButton(
                 icon: Icon(Icons.delete),
                 onPressed: () {},
@@ -68,7 +53,7 @@ class _ThreadState extends State<Thread> {
           ),
           SizedBox(height: 20),
           Text(
-            "Responses",
+            "Tanggapan",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 20),

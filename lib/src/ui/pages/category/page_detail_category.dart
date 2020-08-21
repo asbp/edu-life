@@ -21,7 +21,7 @@ class _DetailCategoryState extends State<DetailCategory> {
     if (response == null) {
       return [];
     }
-    final parsed = json.decode(response.toString()).cast(Map);
+    final parsed = json.decode(response.toString()).cast();
     
     return parsed.map<Category>((json) => new Category.fromJson(json)).toList();
   }

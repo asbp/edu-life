@@ -1,5 +1,6 @@
-import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constant_main.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
@@ -27,7 +28,7 @@ class SearchBar extends StatelessWidget {
                 child: TextField(
                   onChanged: (value) {},
                   decoration: InputDecoration(
-                      hintText: "Apa yang ingin anda tahu?",
+                      hintText: "Apa yang ingin kamu tahu?",
                       hintStyle: TextStyle(color: Colors.black),
                       enabledBorder: InputBorder.none,
                       focusedBorder: InputBorder.none),
