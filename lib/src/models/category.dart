@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Category {
   final String title, author, dateCreated, link, content;
 
@@ -9,7 +11,7 @@ class Category {
     this.content
   });
 
-  factory Category.fromJson(json) {
+  factory Category.fromJson(Map json) {
     return new Category(
       title: json['title'] as String,
       author: json['author'] as String,
@@ -18,5 +20,4 @@ class Category {
       dateCreated: json['date-created'] as String,
     );
   }
-
 }

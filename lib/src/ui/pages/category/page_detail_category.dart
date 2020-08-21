@@ -16,14 +16,14 @@ class DetailCategory extends StatefulWidget {
 }
 
 class _DetailCategoryState extends State<DetailCategory> {
+
   List<Category> parseJson(String response) {
     if (response == null) {
       return [];
     }
-    final parsed = json.decode(response.toString()).cast();
-    // print("aaaaaaaaa$parsed");
+    final parsed = json.decode(response.toString()).cast(Map);
+    
     return parsed.map<Category>((json) => new Category.fromJson(json)).toList();
-    ;
   }
 
   @override
@@ -129,36 +129,6 @@ class _DetailCategoryState extends State<DetailCategory> {
                           );
                         },
                       ),
-                      // ForumItemWidget(
-                      //   title: "title 1",
-                      //   username: "author1",
-                      //   onClicked: () {
-                      //     Navigator.pushReplacement(
-                      //         context,
-                      //         MaterialPageRoute(
-                      //             builder: (context) => DetailArticle()));
-                      //   },
-                      // ),
-                      // ForumItemWidget(
-                      //   title: "title 2",
-                      //   username: "author2",
-                      //   onClicked: () {},
-                      // ),
-                      // ForumItemWidget(
-                      //   title: "title 3",
-                      //   username: "author1",
-                      //   onClicked: () {},
-                      // ),
-                      // ForumItemWidget(
-                      //   title: "title 4",
-                      //   username: "author3",
-                      //   onClicked: () {},
-                      // ),
-                      // ForumItemWidget(
-                      //   title: "title 4",
-                      //   username: "author4",
-                      //   onClicked: () {},
-                      // ),
                     ],
                   ),
                 );
