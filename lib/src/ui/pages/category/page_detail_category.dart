@@ -21,7 +21,7 @@ class _DetailCategoryState extends State<DetailCategory> {
     if (response == null) {
       return [];
     }
-    final parsed = json.decode(response.toString()).cast();
+    final parsed = json.decode(response.toString());
     
     return parsed.map<Category>((json) => new Category.fromJson(json)).toList();
   }
@@ -110,7 +110,7 @@ class _DetailCategoryState extends State<DetailCategory> {
                               parseJson(snapshot.data.toString());
                           // return Text(categories[0].author);
                           return Container(
-                            height: 500,
+                            height: 490,
                             child: ListView.builder(
                                 itemCount: categories.length,
                                 itemBuilder: (context, index) {
