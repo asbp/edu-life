@@ -1,4 +1,5 @@
 import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
+import 'package:edu_life/src/ui/widgets/forum/widget_thread_user_box.dart';
 import 'package:edu_life/src/ui/widgets/widget_forum_response.dart';
 import 'package:flutter/material.dart';
 
@@ -33,26 +34,8 @@ class _ThreadState extends State<ThreadPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Row(
-                children: [
-                  Container(
-                      margin: EdgeInsets.only(right: 10),
-                      child: CircleAvatar()),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Nama pengguna",
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "Tanggal dibuat",
-                      )
-                    ],
-                  ),
-                ],
-              ),
+              ThreadUserBoxWidget(
+                  username: "Pengguna", dateCreated: "1 Januari 2000 10:10:10"),
               IconButton(
                 icon: Icon(Icons.delete),
                 onPressed: () {},
@@ -70,7 +53,7 @@ class _ThreadState extends State<ThreadPage> {
           ),
           SizedBox(height: 20),
           Text(
-            "Responses",
+            "Tanggapan",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 20),
