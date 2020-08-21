@@ -1,9 +1,9 @@
-import 'package:edu_life/src/ui/pages/forum/widget_add_thread.dart';
-import 'package:edu_life/src/ui/pages/thread/thread.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/constant_main.dart';
+import '../../widgets/forum/widget_forum_add_thread.dart';
 import '../../widgets/widget_forum_item.dart';
+import '../thread/thread.dart';
 
 class ForumDashbardPage extends StatefulWidget {
   @override
@@ -53,7 +53,7 @@ class _ForumState extends State<ForumDashbardPage> {
                   padding: EdgeInsets.only(left: 30, top: 5),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Bagikan pengalaman anda disini!",
+                    "Bagikan pengalamanmu di sini!",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
@@ -63,24 +63,21 @@ class _ForumState extends State<ForumDashbardPage> {
               ],
             ),
           ),
-          Container(
-            // padding: const EdgeInsets.only(left: 30, top: 25, right: 30),
-            height: 460,
-            // children: <Widget>[
+          Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.only(top: 20, bottom: 40),
               itemBuilder: (BuildContext context, int index) {
                 return ForumItemWidget(
                   onClicked: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Thread()));
                   },
-                  title: "Title",
+                  title: "Judul",
                   username: "Anonymous",
                 );
               },
-              itemCount: 100,
+              itemCount: 10,
             ),
-            // ],
           ),
         ],
       ),

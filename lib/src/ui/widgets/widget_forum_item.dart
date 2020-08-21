@@ -39,7 +39,7 @@ class ForumItemWidget extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   Text(
-                    "By : $username",
+                    "oleh: $username",
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
                   )
                 ],
