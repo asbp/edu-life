@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../constants/constant_main.dart';
 import '../../widgets/forum/widget_forum_add_thread.dart';
 import '../../widgets/widget_forum_item.dart';
-import '../thread/thread.dart';
+import '../thread/page_thread.dart';
 
 class ForumDashbardPage extends StatefulWidget {
   @override
@@ -70,7 +70,7 @@ class _ForumState extends State<ForumDashbardPage> {
                 return ForumItemWidget(
                   onClicked: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Thread()));
+                        MaterialPageRoute(builder: (context) => ThreadPage()));
                   },
                   title: "Judul",
                   username: "Anonymous",

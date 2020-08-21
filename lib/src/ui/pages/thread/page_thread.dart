@@ -2,12 +2,12 @@ import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
 import 'package:edu_life/src/ui/widgets/widget_forum_response.dart';
 import 'package:flutter/material.dart';
 
-class Thread extends StatefulWidget {
+class ThreadPage extends StatefulWidget {
   @override
   _ThreadState createState() => _ThreadState();
 }
 
-class _ThreadState extends State<Thread> {
+class _ThreadState extends State<ThreadPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,25 +31,27 @@ class _ThreadState extends State<Thread> {
           ),
           SizedBox(height: 20),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              CircleAvatar(),
-              SizedBox(
-                width: 20,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Username",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              Row(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(right: 10),
+                      child: CircleAvatar()),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Nama pengguna",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Tanggal dibuat",
+                      )
+                    ],
                   ),
-                  Text(
-                    "Date created",
-                  )
                 ],
-              ),
-              SizedBox(
-                width: 160,
               ),
               IconButton(
                 icon: Icon(Icons.delete),
