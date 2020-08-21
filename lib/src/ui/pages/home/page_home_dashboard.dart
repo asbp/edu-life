@@ -18,8 +18,8 @@ class HomeDashboardPage extends StatelessWidget {
         children: <Widget>[
           HomeHeaderWidget(
             search: SearchBar(),
-            title: "Halo username !",
-            subtitle: "Mari tingkatakan kualitas diri anda hari ini!",
+            title: "Hai, username!",
+            subtitle: "Mari tingkatakan kualitas dirimu hari ini!",
           ),
           MoreOfSubMenuWidget(subtitle: "Categories", onHitMore: () {}),
           Container(
@@ -35,7 +35,9 @@ class HomeDashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 1",)));
+                                builder: (context) => DetailCategory(
+                                      title: "category 1",
+                                    )));
                       },
                     ),
                     HomeCardImageWidget(
@@ -45,7 +47,9 @@ class HomeDashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 2",)));
+                                builder: (context) => DetailCategory(
+                                      title: "category 2",
+                                    )));
                       },
                     ),
                   ],
@@ -60,7 +64,9 @@ class HomeDashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 3",)));
+                                builder: (context) => DetailCategory(
+                                      title: "category 3",
+                                    )));
                       },
                     ),
                     HomeCardImageWidget(
@@ -70,7 +76,9 @@ class HomeDashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 4",)));
+                                builder: (context) => DetailCategory(
+                                      title: "category 4",
+                                    )));
                       },
                     ),
                   ],
@@ -85,7 +93,9 @@ class HomeDashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 5",)));
+                                builder: (context) => DetailCategory(
+                                      title: "category 5",
+                                    )));
                       },
                     ),
                     HomeCardImageWidget(
@@ -95,7 +105,9 @@ class HomeDashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 6",)));
+                                builder: (context) => DetailCategory(
+                                      title: "category 6",
+                                    )));
                       },
                     ),
                   ],
