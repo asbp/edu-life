@@ -1,7 +1,13 @@
 import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/models/category.dart';
 import 'package:flutter/material.dart';
 
 class DetailArticle extends StatefulWidget {
+  final List<Category> categories;
+  final int idx;
+
+  const DetailArticle({Key key, this.categories, this.idx}) : super(key: key);
+
   @override
   _DetailArticleState createState() => _DetailArticleState();
 }
@@ -11,13 +17,14 @@ class _DetailArticleState extends State<DetailArticle> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(""),
         leading: new IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -32,7 +39,7 @@ class _DetailArticleState extends State<DetailArticle> {
               child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Judul Artikel",
+                    widget.categories[widget.idx].title,
                     style: TextStyle(
                         fontSize: 24,
                         color: Colors.black,
@@ -43,7 +50,7 @@ class _DetailArticleState extends State<DetailArticle> {
               padding: EdgeInsets.only(left: 35),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text("Author: Nama Author",
+                child: Text("Author: ${widget.categories[widget.idx].author}",
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
@@ -56,7 +63,7 @@ class _DetailArticleState extends State<DetailArticle> {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Created at 24 Agustus 2020",
+                  widget.categories[widget.idx].dateCreated.substring(0, widget.categories[widget.idx].dateCreated.indexOf('|')),
                   style: TextStyle(fontSize: 14),
                 ),
               ),
@@ -72,11 +79,11 @@ class _DetailArticleState extends State<DetailArticle> {
                 decoration: BoxDecoration(color: colorPrimary)),
             SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.only(left: 35),
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                    "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at tellus at urna condimentum mattis pellentesque id. Tortor condimentum lacinia quis vel eros. Nibh sit amet commodo nulla facilisi. Pellentesque habitant\nLorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at tellus at urna condimentum mattis pellentesque id. Tortor condimentum lacinia quis vel eros. Nibh sit amet commodo nulla facilisi. Pellentesque habitant",
+                    widget.categories[widget.idx].content,
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.normal,

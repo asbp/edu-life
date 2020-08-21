@@ -8,6 +8,8 @@ class HomepageCategoryGridView extends StatefulWidget {
 }
 
 class _HomeCatGridState extends State<HomepageCategoryGridView> {
+  List<String> articles = ["career","ethics","finance"];
+
   @override
   Widget build(BuildContext context) {
     return GridView.count(
@@ -18,16 +20,16 @@ class _HomeCatGridState extends State<HomepageCategoryGridView> {
       crossAxisSpacing: 10,
       childAspectRatio: 200 / 300,
       padding: EdgeInsets.all(20),
-      children: List.generate(10, (index) {
+      children: List.generate(articles.length, (index) {
         return HomeCategoryItemWidget(
-          caption: "Kategori $index",
+          caption: articles[index],
           image: AssetImage("assets/images/bottom_img_2.png"),
           onClick: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => DetailCategory(
-                          title: "Kategori $index",
+                          title: articles[index],
                         )));
           },
         );

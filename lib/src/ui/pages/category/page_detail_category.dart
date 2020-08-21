@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:edu_life/src/constants/constant_main.dart';
+import 'package:edu_life/src/models/category.dart';
 import 'package:edu_life/src/ui/pages/category/page_detail_article.dart';
 import 'package:edu_life/src/ui/widgets/widget_forum_item.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +16,16 @@ class DetailCategory extends StatefulWidget {
 }
 
 class _DetailCategoryState extends State<DetailCategory> {
+
+  List<Category> parseJson(String response) {
+    if (response == null) {
+      return [];
+    }
+    final parsed = json.decode(response.toString()).cast();
+    
+    return parsed.map<Category>((json) => new Category.fromJson(json)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,35 +102,32 @@ class _DetailCategoryState extends State<DetailCategory> {
                               fontSize: 16),
                         ),
                       ),
-                      ForumItemWidget(
-                        title: "title 1",
-                        username: "author1",
-                        onClicked: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DetailArticle()));
+                      FutureBuilder(
+                        future: DefaultAssetBundle.of(context).loadString(
+                            "assets/json/article_${widget.title}.json"),
+                        builder: (context, snapshot) {
+                          List<Category> categories =
+                              parseJson(snapshot.data.toString());
+                          // return Text(categories[0].author);
+                          return Container(
+                            height: 500,
+                            child: ListView.builder(
+                                itemCount: categories.length,
+                                itemBuilder: (context, index) {
+                                  return ForumItemWidget(
+                                    title: categories[index].title,
+                                    username: categories[index].author,
+                                    onClicked: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailArticle(categories: categories, idx: index,)));
+                                    },
+                                  );
+                                }),
+                          );
                         },
-                      ),
-                      ForumItemWidget(
-                        title: "title 2",
-                        username: "author2",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 3",
-                        username: "author1",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 4",
-                        username: "author3",
-                        onClicked: () {},
-                      ),
-                      ForumItemWidget(
-                        title: "title 4",
-                        username: "author4",
-                        onClicked: () {},
                       ),
                     ],
                   ),

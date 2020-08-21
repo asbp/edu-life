@@ -112,6 +112,7 @@ class _RegisterState extends State<RegisterPage> {
                         onPressed: () {
                           _toggle();
                         })),
+                obscureText: _obscureText,
               ),
             ),
             SizedBox(height: 30),
@@ -140,11 +141,9 @@ class _RegisterState extends State<RegisterPage> {
                       GestureDetector(
                         onTap: () {
                           Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => LoginPage()
-                            )
-                          );
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()));
                         },
                         child: Text(
                           "Login",
