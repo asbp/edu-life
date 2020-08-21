@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'src/ui/pages/page_landing.dart';
-
+ 
 void main() {
   runApp(MyApp());
 }

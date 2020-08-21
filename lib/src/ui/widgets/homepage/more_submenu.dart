@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:edu_life/src/ui/pages/category/page_all_category.dart';
 import '../../../constants/constant_main.dart';
 
 class MoreOfSubMenuWidget extends StatelessWidget {
@@ -30,7 +30,10 @@ class MoreOfSubMenuWidget extends StatelessWidget {
             color: colorPrimary,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            onPressed: onHitMore,
+            onPressed:(){ Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AllCategory()));}, //onHitMore,
             child: Text(
               "Lihat semua",
               style: TextStyle(color: Colors.white),
