@@ -30,22 +30,22 @@ class HomeDashboardPage extends StatelessWidget {
                   children: <Widget>[
                     HomeCardImageWidget(
                       img: "assets/images/bottom_img_2.png",
-                      category: "category 1",
+                      category: "career",
                       onClicked: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 1",)));
+                                builder: (context) => DetailCategory(title: "career",)));
                       },
                     ),
                     HomeCardImageWidget(
                       img: "assets/images/bottom_img_2.png",
-                      category: "category 2",
+                      category: "ethics",
                       onClicked: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 2",)));
+                                builder: (context) => DetailCategory(title: "ethics",)));
                       },
                     ),
                   ],
@@ -55,12 +55,12 @@ class HomeDashboardPage extends StatelessWidget {
                   children: <Widget>[
                     HomeCardImageWidget(
                       img: "assets/images/bottom_img_2.png",
-                      category: "category 3",
+                      category: "finance",
                       onClicked: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailCategory(title: "category 3",)));
+                                builder: (context) => DetailCategory(title: "finance",)));
                       },
                     ),
                     HomeCardImageWidget(
