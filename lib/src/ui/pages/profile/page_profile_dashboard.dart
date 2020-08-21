@@ -109,9 +109,13 @@ class _ProfileState extends State<ProfilePage> {
 }
 
 Widget cardPost(title, username) {
-  return Card(
+  return Container(
       margin: EdgeInsets.only(top: 10, left: 30, right: 30),
-      elevation: 8,
+      decoration: BoxDecoration(
+        color: colorSmallComponent,
+        boxShadow: darkShadow,
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+      ),
       child: ListTile(
         leading: Image.asset("assets/images/logo.png", scale: 5),
         title: Text(
