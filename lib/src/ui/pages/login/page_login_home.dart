@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginPage> {
         Center(
           child: Image.asset(
             "assets/images/logo.png",
-            scale: 6,
+            scale: 22,
           ),
         ),
         SizedBox(height: 5),

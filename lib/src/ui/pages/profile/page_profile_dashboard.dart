@@ -23,7 +23,7 @@ class _ProfileState extends State<ProfilePage> {
                   children: <Widget>[
                     Image.asset(
                       "assets/images/logo.png",
-                      scale: 3,
+                      scale: 12,
                     ),
                     Text(
                       "Username",

@@ -29,7 +29,7 @@ class _RegisterState extends State<RegisterPage> {
             Center(
               child: Image.asset(
                 "assets/images/logo.png",
-                scale: 6,
+                scale: 22,
               ),
             ),
             SizedBox(height: 5),

@@ -18,7 +18,7 @@ class OnboardPageViewWidget extends StatelessWidget {
             padding: EdgeInsets.only(top: 20),
             child: Image.asset(
               "assets/images/logo.png",
-              scale: 6,
+              scale: 22,
             ),
           ),
           SizedBox(height: 5),
