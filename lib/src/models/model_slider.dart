@@ -42,9 +42,9 @@ List<SliderModel> getSlides() {
   SliderModel slide2 = new SliderModel();
 
   slide2.setImgAsset("assets/images/sitting8.png");
-  slide2.setTitle("Adab dan Adat");
+  slide2.setTitle("Kembangkan Diri Anda");
   slide2
-      .setDesctiption("bbbbbbbbbbbbbbb bbb bbbbbbbb bb bbb b bbbbbbbbbbbbbbbb");
+      .setDesctiption("Pengembangan diri merupakan hal yang paling diperlukan bagi setiap manusia. Ketika waktu terus berjalan, diri kita harus menjadi lebih baik lagi.");
   slides.add(slide2);
 
   SliderModel slide3 = new SliderModel();
