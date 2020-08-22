@@ -8,7 +8,7 @@ class HomepageCategoryGridView extends StatefulWidget {
 }
 
 class _HomeCatGridState extends State<HomepageCategoryGridView> {
-  List<String> articles = ["career","ethics","finance"];
+  List<String> articles = ["Karir","Etika","Finansial"];
 
   @override
   Widget build(BuildContext context) {

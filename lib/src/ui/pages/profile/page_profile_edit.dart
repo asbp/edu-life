@@ -37,7 +37,7 @@ class _ProfileEditState extends State<ProfileEditPage> {
             Center(
               child: Image.asset(
                 "assets/images/logo.png",
-                scale: 3,
+                scale: 10,
               ),
             ),
             SizedBox(height: 10),
