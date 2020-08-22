@@ -23,7 +23,7 @@ class _HomeCatGridState extends State<HomepageCategoryGridView> {
       children: List.generate(articles.length, (index) {
         return HomeCategoryItemWidget(
           caption: articles[index],
-          image: AssetImage("assets/images/bottom_img_2.png"),
+          image: AssetImage("assets/images/life2.jpg"),
           onClick: () {
             Navigator.push(
                 context,

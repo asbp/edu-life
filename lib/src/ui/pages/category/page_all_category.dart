@@ -41,10 +41,9 @@ class _AllCategoryState extends State<AllCategory> {
           ),
           SizedBox(height: 20),
           cardCategory("Etika"),
-          cardCategory("Adat"),
-          cardCategory("Pekerjaan"),
-          cardCategory("Rumah Tangga"),
-          cardCategory("LifeHack"),
+          cardCategory("Karir"),
+          cardCategory("Finansial"),
+          
         ],
       )),
     );
@@ -55,9 +54,9 @@ Widget cardCategory(category) {
   return GestureDetector(
       onTap: () {},
       child: Container(
-          margin: EdgeInsets.only(top: 10, left: 30, right: 30),
+          margin: EdgeInsets.only(top: 10, left: 20, right: 20),
           height: 90,
-          width: 300,
+          width: 350,
           decoration: BoxDecoration(
             color: colorSecondary,
             boxShadow: darkShadow,

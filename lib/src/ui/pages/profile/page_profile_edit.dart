@@ -2,6 +2,7 @@ import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:edu_life/src/ui/widgets/buttons/flat_button_primary.dart';
 import 'package:flutter/material.dart';
 
+import '../login/page_login_home.dart';
 import '../page_main_layout.dart';
 
 class ProfileEditPage extends StatefulWidget {
@@ -36,7 +37,7 @@ class _ProfileEditState extends State<ProfileEditPage> {
             Center(
               child: Image.asset(
                 "assets/images/logo.png",
-                scale: 3,
+                scale: 10,
               ),
             ),
             SizedBox(height: 10),
@@ -134,7 +135,19 @@ class _ProfileEditState extends State<ProfileEditPage> {
                 children: <Widget>[
                   PrimaryFlatButton(onClicked: (){}, text: "Ubah Data",),
                   PrimaryFlatButton(onClicked: (){}, text: "Ubah Password",),
-                ])
+                ]
+            ),
+            Padding(
+              padding: EdgeInsets.only(left:40, right: 40),
+              child: PrimaryFlatButton(
+              onClicked: (){
+                Navigator.pushReplacement(context,
+                  MaterialPageRoute(
+                      builder: (context) => LoginPage()));
+              },
+              text: "Keluar",
+            ),
+            )
           ],
         ));
   }
