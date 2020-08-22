@@ -1,6 +1,5 @@
 import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
 import 'package:edu_life/src/ui/widgets/forum/widget_thread_user_box.dart';
-import 'package:edu_life/src/ui/widgets/widget_forum_response.dart';
 import 'package:flutter/material.dart';
 
 class ThreadPage extends StatefulWidget {

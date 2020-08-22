@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/constant_main.dart';
@@ -17,6 +18,30 @@ class _RegisterState extends State<RegisterPage> {
     setState(() {
       _obscureText = !_obscureText;
     });
+  }
+
+  TextEditingController textEmail = new TextEditingController();
+  TextEditingController textUsername = new TextEditingController();
+  TextEditingController textPassword = new TextEditingController();
+
+  Dio dio = new Dio();
+
+  void registerUser() async {
+    var url = 'http://10.0.2.2:8080/api/register';
+
+    try {
+      Response res = await dio.post(url, data: {
+        "username": textUsername.text,
+        "email": textEmail.text,
+        "password": textPassword.text,
+      });
+
+      print("MASUK");
+      print(res.statusCode);
+    } catch (e) {
+      print("ERROR");
+      print(e);
+    }
   }
 
   @override
@@ -60,6 +85,7 @@ class _RegisterState extends State<RegisterPage> {
                   border: Border.all(color: colorSecondary),
                   borderRadius: BorderRadius.circular(40)),
               child: TextFormField(
+                controller: textUsername,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20, right: 20),
                     hintText: "username",
@@ -79,6 +105,7 @@ class _RegisterState extends State<RegisterPage> {
                   border: Border.all(color: colorSecondary),
                   borderRadius: BorderRadius.circular(40)),
               child: TextFormField(
+                controller: textEmail,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20, right: 20),
                     hintText: "email",
@@ -98,6 +125,7 @@ class _RegisterState extends State<RegisterPage> {
                   border: Border.all(color: colorSecondary),
                   borderRadius: BorderRadius.circular(40)),
               child: TextFormField(
+                controller: textPassword,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20, right: 20),
                     hintText: "password",
@@ -122,10 +150,22 @@ class _RegisterState extends State<RegisterPage> {
                   ButtonPrimary(
                       text: "Daftar",
                       onClick: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeMainLayoutPage()));
+                        // final snackBar = SnackBar(
+                        //   content: Text('Yay! A SnackBar!'),
+                        //   action: SnackBarAction(
+                        //     label: 'Undo',
+                        //     onPressed: () {
+                        //     },
+                        //   ),
+                        // );
+                        registerUser();
+                        print("REGIS");
+                        // registerUser().then((value) => value
+                        //     ? Navigator.pushReplacement(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //             builder: (context) => HomeMainLayoutPage()))
+                        //     : Scaffold.of(context).showSnackBar(snackBar));
                       }),
                   SizedBox(height: 10),
                   Row(

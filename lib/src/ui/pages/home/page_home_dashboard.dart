@@ -1,11 +1,9 @@
 import 'package:edu_life/src/ui/widgets/homepage/widget_home_category_gridview.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/homepage/home_card_image.dart';
 import '../../widgets/homepage/more_submenu.dart';
 import '../../widgets/homepage/search_bar.dart';
 import '../../widgets/homepage/widget_home_header.dart';
-import '../category/page_detail_category.dart';
 
 class HomeDashboardPage extends StatelessWidget {
   const HomeDashboardPage({

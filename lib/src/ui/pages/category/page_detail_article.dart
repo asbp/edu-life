@@ -35,7 +35,7 @@ class _DetailArticleState extends State<DetailArticle> {
           children: <Widget>[
             SizedBox(height: 10),
             Padding(
-              padding: EdgeInsets.only(left: 35),
+              padding: EdgeInsets.only(left: 20,right: 20),
               child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
