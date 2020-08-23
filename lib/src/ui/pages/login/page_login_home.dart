@@ -1,9 +1,9 @@
-import 'package:edu_life/src/constants/constant_main.dart';
-import 'package:edu_life/src/ui/pages/register/page_register.dart';
-import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
-
-import '../page_main_layout.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constant_main.dart';
+import '../../widgets/buttons/button_primary.dart';
+import '../page_main_layout.dart';
+import '../register/page_register.dart';
 
 class LoginPage extends StatefulWidget {
   @override

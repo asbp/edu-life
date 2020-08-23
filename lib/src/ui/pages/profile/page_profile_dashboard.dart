@@ -1,6 +1,7 @@
-import 'package:edu_life/src/constants/constant_main.dart';
-import 'package:edu_life/src/ui/pages/profile/page_profile_edit.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constant_main.dart';
+import 'page_profile_edit.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key key, this.username}) : super(key: key);

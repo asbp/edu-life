@@ -1,9 +1,8 @@
-import 'package:edu_life/src/constants/constant_main.dart';
-import 'package:edu_life/src/ui/widgets/buttons/flat_button_primary.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants/constant_main.dart';
+import '../../widgets/buttons/flat_button_primary.dart';
 import '../login/page_login_home.dart';
-import '../page_main_layout.dart';
 
 class ProfileEditPage extends StatefulWidget {
   @override
