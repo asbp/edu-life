@@ -6,8 +6,12 @@ import 'home/page_home_dashboard.dart';
 import 'profile/page_profile_dashboard.dart';
 
 class HomeMainLayoutPage extends StatefulWidget {
+  const HomeMainLayoutPage({Key key, this.username}) : super(key: key);
+
   @override
   _HomeState createState() => _HomeState();
+
+  final String username;
 }
 
 class _HomeState extends State<HomeMainLayoutPage> {
@@ -23,18 +27,13 @@ class _HomeState extends State<HomeMainLayoutPage> {
   List<Widget> pageList = List<Widget>();
 
   @override
-  void initState(){
-    pageList.add(HomeDashboardPage());
+  void initState() {
+    pageList.add(HomeDashboardPage(username: widget.username));
     pageList.add(ForumDashbardPage());
-    pageList.add(ProfilePage());
+    pageList.add(ProfilePage(username: widget.username,));
     super.initState();
+    print(widget.username);
   }
-
-  final _pageOptions = [
-    HomeDashboardPage(),
-    ForumDashbardPage(),
-    ProfilePage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class _HomeState extends State<HomeMainLayoutPage> {
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,
-        children: _pageOptions,
+        children: pageList,
       ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: false,
@@ -60,7 +59,6 @@ class _HomeState extends State<HomeMainLayoutPage> {
             title: Text('Profile'),
           ),
         ],
-        
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.white,
         backgroundColor: colorPrimary,
@@ -68,7 +66,6 @@ class _HomeState extends State<HomeMainLayoutPage> {
         elevation: 0.0,
         onTap: _onItemTapped,
         currentIndex: _selectedIndex,
-        
       ),
     );
   }

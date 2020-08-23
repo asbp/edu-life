@@ -7,8 +7,10 @@ import '../../widgets/homepage/widget_home_header.dart';
 
 class HomeDashboardPage extends StatelessWidget {
   const HomeDashboardPage({
-    Key key,
+    Key key, this.username,
   }) : super(key: key);
+
+  final String username;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class HomeDashboardPage extends StatelessWidget {
           children: <Widget>[
             HomeHeaderWidget(
               search: SearchBar(),
-              title: "Hai, username!",
+              title: "Hai, ${username}!",
               subtitle: "Mari tingkatakan kualitas dirimu hari ini!",
             ),
             MoreOfSubMenuWidget(subtitle: "Kategori", onHitMore: () {}),

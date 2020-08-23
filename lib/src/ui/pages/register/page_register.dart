@@ -5,6 +5,7 @@ import '../../../constants/constant_main.dart';
 import '../../widgets/buttons/button_primary.dart';
 import '../login/page_login_home.dart';
 import '../page_main_layout.dart';
+import 'package:http/http.dart' as http;
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -13,6 +14,7 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterState extends State<RegisterPage> {
   bool _obscureText = true;
+  String username;
   // Toggles the password show status
   void _toggle() {
     setState(() {
@@ -24,24 +26,14 @@ class _RegisterState extends State<RegisterPage> {
   TextEditingController textUsername = new TextEditingController();
   TextEditingController textPassword = new TextEditingController();
 
-  Dio dio = new Dio();
-
-  void registerUser() async {
-    var url = 'http://10.0.2.2:8080/api/register';
-
-    try {
-      Response res = await dio.post(url, data: {
-        "username": textUsername.text,
-        "email": textEmail.text,
-        "password": textPassword.text,
-      });
-
-      print("MASUK");
-      print(res.statusCode);
-    } catch (e) {
-      print("ERROR");
-      print(e);
-    }
+  void registerUser() {
+    setState(() {
+      username = textUsername.text;
+    });
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeMainLayoutPage(username: username)));
   }
 
   @override
@@ -150,22 +142,7 @@ class _RegisterState extends State<RegisterPage> {
                   ButtonPrimary(
                       text: "Daftar",
                       onClick: () {
-                        // final snackBar = SnackBar(
-                        //   content: Text('Yay! A SnackBar!'),
-                        //   action: SnackBarAction(
-                        //     label: 'Undo',
-                        //     onPressed: () {
-                        //     },
-                        //   ),
-                        // );
                         registerUser();
-                        print("REGIS");
-                        // registerUser().then((value) => value
-                        //     ? Navigator.pushReplacement(
-                        //         context,
-                        //         MaterialPageRoute(
-                        //             builder: (context) => HomeMainLayoutPage()))
-                        //     : Scaffold.of(context).showSnackBar(snackBar));
                       }),
                   SizedBox(height: 10),
                   Row(
