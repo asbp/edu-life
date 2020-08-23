@@ -70,8 +70,7 @@ class _ThreadInputState extends State<ThreadInput> {
                 child: FlatButton(
                   color: colorSecondary,
                   onPressed: () {
-                     Navigator.pushReplacement(context, MaterialPageRoute(
-                              builder: (context) => ForumDashbardPage()));
+                     Navigator.pop(context);
                   },
                   child: Text(
                     "KIRIM",

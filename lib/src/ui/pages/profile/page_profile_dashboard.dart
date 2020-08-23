@@ -102,7 +102,7 @@ class _ProfileState extends State<ProfilePage> {
           Container(
               height: 555,
               child: ListView.builder(
-                  itemCount: 100,
+                  itemCount: 10,
                   itemBuilder: (context, index) {
                     return cardPost(
                         'Bentuk Pertanyaan/Response', 'by: ${widget.username}');
