@@ -47,7 +47,7 @@ dependencies:
   intl: ^0.16.1
   getflutter: ^1.0.11
   shimmer: ^1.1.1
-  flutter_launcher_icons: ^0.7.4
+  flutter_launcher_icons: ^0.7.5
   basic_utils: ^2.5.3
   package_info: ^0.4.0+16
   animations: ^1.0.0+5
@@ -58,6 +58,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

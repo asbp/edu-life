@@ -1,11 +1,10 @@
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../constants/constant_main.dart';
 import '../../widgets/buttons/button_primary.dart';
 import '../login/page_login_home.dart';
 import '../page_main_layout.dart';
-import 'package:http/http.dart' as http;
 
 class RegisterPage extends StatefulWidget {
   @override
