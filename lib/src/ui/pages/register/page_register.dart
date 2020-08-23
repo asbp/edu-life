@@ -1,9 +1,11 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/constant_main.dart';
 import '../../widgets/buttons/button_primary.dart';
 import '../login/page_login_home.dart';
 import '../page_main_layout.dart';
+import 'package:http/http.dart' as http;
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -12,11 +14,26 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterState extends State<RegisterPage> {
   bool _obscureText = true;
+  String username;
   // Toggles the password show status
   void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
     });
+  }
+
+  TextEditingController textEmail = new TextEditingController();
+  TextEditingController textUsername = new TextEditingController();
+  TextEditingController textPassword = new TextEditingController();
+
+  void registerUser() {
+    setState(() {
+      username = textUsername.text;
+    });
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeMainLayoutPage(username: username)));
   }
 
   @override
@@ -60,6 +77,7 @@ class _RegisterState extends State<RegisterPage> {
                   border: Border.all(color: colorSecondary),
                   borderRadius: BorderRadius.circular(40)),
               child: TextFormField(
+                controller: textUsername,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20, right: 20),
                     hintText: "username",
@@ -79,6 +97,7 @@ class _RegisterState extends State<RegisterPage> {
                   border: Border.all(color: colorSecondary),
                   borderRadius: BorderRadius.circular(40)),
               child: TextFormField(
+                controller: textEmail,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20, right: 20),
                     hintText: "email",
@@ -98,6 +117,7 @@ class _RegisterState extends State<RegisterPage> {
                   border: Border.all(color: colorSecondary),
                   borderRadius: BorderRadius.circular(40)),
               child: TextFormField(
+                controller: textPassword,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 20, right: 20),
                     hintText: "password",
@@ -122,10 +142,7 @@ class _RegisterState extends State<RegisterPage> {
                   ButtonPrimary(
                       text: "Daftar",
                       onClick: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeMainLayoutPage()));
+                        registerUser();
                       }),
                   SizedBox(height: 10),
                   Row(

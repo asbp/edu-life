@@ -27,9 +27,9 @@ class HomeCategoryItemWidget extends StatelessWidget {
             child: Text(
               caption,
               style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16),
+                  fontSize: 20),
             ),
           ),
           decoration: new BoxDecoration(

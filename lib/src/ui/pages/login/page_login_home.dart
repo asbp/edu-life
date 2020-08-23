@@ -11,10 +11,18 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginPage> {
+  String username;
+  TextEditingController textUsername = new TextEditingController();
+  TextEditingController textPassword = new TextEditingController();
   void _doLogin() {
-    /* TODO: IMPLEMENTS LOGIC */
+    setState(() {
+      username = textUsername.text;
+    });
+
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => HomeMainLayoutPage()));
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeMainLayoutPage(username: username)));
   }
 
   bool _obscureText = true;
@@ -71,6 +79,7 @@ class _LoginScreenState extends State<LoginPage> {
               border: Border.all(color: colorSecondary),
               borderRadius: BorderRadius.circular(40)),
           child: TextFormField(
+            controller: textUsername,
             decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20, right: 20),
                 hintText: "username",
@@ -90,6 +99,7 @@ class _LoginScreenState extends State<LoginPage> {
               border: Border.all(color: colorSecondary),
               borderRadius: BorderRadius.circular(40)),
           child: TextFormField(
+            controller: textPassword,
             decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20, right: 20),
                 hintText: "password",
