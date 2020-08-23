@@ -35,17 +35,18 @@ class _DetailArticleState extends State<DetailArticle> {
           children: <Widget>[
             SizedBox(height: 10),
             Padding(
-              padding: EdgeInsets.only(left: 20,right: 20),
-              child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    widget.categories[widget.idx].title,
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: RichText(
+                  text: TextSpan(
+                    text: widget.categories[widget.idx].title,
                     style: TextStyle(
                         fontSize: 24,
+                        fontFamily: 'Montserrat',
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
-                  )),
-            ),
+                  ),
+                  textAlign: TextAlign.center,
+                )),
             Padding(
               padding: EdgeInsets.only(left: 35),
               child: Align(
@@ -63,7 +64,8 @@ class _DetailArticleState extends State<DetailArticle> {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  widget.categories[widget.idx].dateCreated.substring(0, widget.categories[widget.idx].dateCreated.indexOf('|')),
+                  widget.categories[widget.idx].dateCreated.substring(0,
+                      widget.categories[widget.idx].dateCreated.indexOf('|')),
                   style: TextStyle(fontSize: 14),
                 ),
               ),
@@ -81,14 +83,14 @@ class _DetailArticleState extends State<DetailArticle> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                    widget.categories[widget.idx].content,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.normal,
-                    )),
-              ),
+                  alignment: Alignment.centerLeft,
+                  child: RichText(
+                    text: TextSpan(
+                        text: widget.categories[widget.idx].content,
+                        style: TextStyle(
+                            color: Colors.black, fontFamily: 'Montserrat')),
+                    textAlign: TextAlign.justify,
+                  )),
             ),
           ],
         ),
