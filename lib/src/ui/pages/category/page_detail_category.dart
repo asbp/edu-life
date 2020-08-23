@@ -16,14 +16,13 @@ class DetailCategory extends StatefulWidget {
 }
 
 class _DetailCategoryState extends State<DetailCategory> {
-
   List<Category> parseJson(String response) {
     if (response == null) {
       return [];
     }
     final parsed = json.decode(response.toString());
-    
-    return parsed.map<Category>((json) => new Category.fromJson(json)).toList();
+
+    return parsed != null ? parsed.map<Category>((json) => new Category.fromJson(json)).toList() : null;
   }
 
   @override
@@ -112,7 +111,8 @@ class _DetailCategoryState extends State<DetailCategory> {
                           return Container(
                             height: 490,
                             child: ListView.builder(
-                                itemCount: categories.length,
+                                itemCount:
+                                    categories == null ? 0 : categories.length,
                                 itemBuilder: (context, index) {
                                   return ForumItemWidget(
                                     title: categories[index].title,
@@ -122,7 +122,10 @@ class _DetailCategoryState extends State<DetailCategory> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  DetailArticle(categories: categories, idx: index,)));
+                                                  DetailArticle(
+                                                    categories: categories,
+                                                    idx: index,
+                                                  )));
                                     },
                                   );
                                 }),

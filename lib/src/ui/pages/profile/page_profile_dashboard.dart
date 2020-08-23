@@ -19,12 +19,13 @@ class _ProfileState extends State<ProfilePage> {
       child: Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: 60,bottom: 20),
+            padding: EdgeInsets.only(top: 60, bottom: 20),
             decoration: BoxDecoration(
-              color: colorPrimary,
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
-              boxShadow: darkShadow
-            ),
+                color: colorPrimary,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)),
+                boxShadow: darkShadow),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -67,16 +68,14 @@ class _ProfileState extends State<ProfilePage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                         onPressed: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => ProfileEditPage()));
                         },
                         child: Text(
                           "\tPengaturan\t",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: colorPrimary),
+                          style: TextStyle(fontSize: 14, color: colorPrimary),
                         ),
                       )
                     ],
@@ -89,7 +88,7 @@ class _ProfileState extends State<ProfilePage> {
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 35,bottom: 10),
+            padding: EdgeInsets.only(left: 35, bottom: 10),
             child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(

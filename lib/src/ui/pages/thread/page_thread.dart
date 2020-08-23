@@ -1,6 +1,7 @@
 import 'package:edu_life/src/ui/pages/thread/page_thread_comment.dart';
 import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
 import 'package:edu_life/src/ui/widgets/forum/widget_thread_user_box.dart';
+import 'package:edu_life/src/ui/widgets/widget_thread_response.dart';
 import 'package:flutter/material.dart';
 
 class ThreadPage extends StatefulWidget {
@@ -9,7 +10,6 @@ class ThreadPage extends StatefulWidget {
 }
 
 class _ThreadState extends State<ThreadPage> {
-
   Future<void> _showMyDialog() async {
     return showDialog<void>(
       context: context,
@@ -79,14 +79,22 @@ class _ThreadState extends State<ThreadPage> {
             ],
           ),
           SizedBox(height: 20),
-          Text(
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          RichText(
+            text: TextSpan(
+              text:
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                color: Colors.black,
+              ),
+            ),
+            textAlign: TextAlign.justify,
           ),
           SizedBox(height: 20),
           ButtonPrimary(
             onClick: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(
-                              builder: (context) => ThreadComment()));
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => ThreadComment()));
             },
             text: "Tanggapi",
           ),
@@ -96,54 +104,49 @@ class _ThreadState extends State<ThreadPage> {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 20),
-          Container(    
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                CircleAvatar(),
-                SizedBox(width: 20,),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Username",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Menanggapi",
-                          style: TextStyle(
-                            fontStyle: FontStyle.italic
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 5,),
-                      Text(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                      )
-                    ],
-                  ),
-                ),
-                IconButton(
-                  icon: Icon(Icons.delete),
-                  onPressed: () {
-                    _showMyDialog();
-                  },
-                )
-              ],
-            )
+          ThreadResponse(
+            username: "Anonymous",
+            dialog: () {
+              _showMyDialog();
+            },
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            dialog: () {
+              _showMyDialog();
+            },
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            dialog: () {
+              _showMyDialog();
+            },
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            dialog: () {
+              _showMyDialog();
+            },
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            dialog: () {
+              _showMyDialog();
+            },
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
           ),
         ],
       ),
       // keyboard to comment
-      
     );
   }
 }

@@ -15,17 +15,13 @@ class _ProfileEditState extends State<ProfileEditPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(""),
           leading: new IconButton(
             icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => HomeMainLayoutPage()));
+              Navigator.pop(context);
             },
           ),
           backgroundColor: Colors.transparent,
@@ -133,23 +129,26 @@ class _ProfileEditState extends State<ProfileEditPage> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  PrimaryFlatButton(onClicked: (){}, text: "Ubah Data",),
-                  PrimaryFlatButton(onClicked: (){}, text: "Ubah Password",),
-                ]
-            ),
+                  PrimaryFlatButton(
+                    onClicked: () {},
+                    text: "Ubah Data",
+                  ),
+                  PrimaryFlatButton(
+                    onClicked: () {},
+                    text: "Ubah Password",
+                  ),
+                ]),
             Padding(
-              padding: EdgeInsets.only(left:40, right: 40),
+              padding: EdgeInsets.only(left: 40, right: 40),
               child: PrimaryFlatButton(
-              onClicked: (){
-                Navigator.pushReplacement(context,
-                  MaterialPageRoute(
-                      builder: (context) => LoginPage()));
-              },
-              text: "Keluar",
-            ),
+                onClicked: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => LoginPage()));
+                },
+                text: "Keluar",
+              ),
             )
           ],
         ));
   }
 }
-
