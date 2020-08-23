@@ -1,6 +1,7 @@
-import 'package:edu_life/src/constants/constant_main.dart';
-import 'package:edu_life/src/models/category.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constant_main.dart';
+import '../../../models/category.dart';
 
 class DetailArticle extends StatefulWidget {
   final List<Category> categories;

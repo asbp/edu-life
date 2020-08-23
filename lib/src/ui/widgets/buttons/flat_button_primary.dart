@@ -1,9 +1,12 @@
-import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constant_main.dart';
 
 class PrimaryFlatButton extends StatelessWidget {
   const PrimaryFlatButton({
-    Key key, this.onClicked, this.text,
+    Key key,
+    this.onClicked,
+    this.text,
   }) : super(key: key);
 
   final Function onClicked;

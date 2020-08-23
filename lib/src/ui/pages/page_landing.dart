@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:edu_life/src/ui/pages/page_main_layout.dart';
-import 'package:edu_life/src/ui/pages/widget_onboarding.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/constant_main.dart';
+import 'page_main_layout.dart';
+import 'widget_onboarding.dart';
 
 class SplashscreenPage extends StatefulWidget {
   const SplashscreenPage({Key key, @required this.firstInstall})

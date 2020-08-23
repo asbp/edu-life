@@ -1,5 +1,6 @@
-import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constant_main.dart';
 
 class AllCategory extends StatefulWidget {
   @override

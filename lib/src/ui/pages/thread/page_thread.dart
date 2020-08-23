@@ -1,8 +1,9 @@
-import 'package:edu_life/src/ui/pages/thread/page_thread_comment.dart';
-import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
-import 'package:edu_life/src/ui/widgets/forum/widget_thread_user_box.dart';
-import 'package:edu_life/src/ui/widgets/widget_thread_response.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/buttons/button_primary.dart';
+import '../../widgets/forum/widget_thread_user_box.dart';
+import '../../widgets/widget_thread_response.dart';
+import 'page_thread_comment.dart';
 
 class ThreadPage extends StatefulWidget {
   @override

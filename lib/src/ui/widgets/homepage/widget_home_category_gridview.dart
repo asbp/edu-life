@@ -1,6 +1,7 @@
-import 'package:edu_life/src/ui/pages/category/page_detail_category.dart';
-import 'package:edu_life/src/ui/widgets/homepage/widget_home_category_item.dart';
 import 'package:flutter/material.dart';
+
+import '../../pages/category/page_detail_category.dart';
+import 'widget_home_category_item.dart';
 
 class HomepageCategoryGridView extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class HomepageCategoryGridView extends StatefulWidget {
 }
 
 class _HomeCatGridState extends State<HomepageCategoryGridView> {
-  List<String> articles = ["career","ethics","finance"];
+  List<String> articles = ["career", "ethics", "finance"];
 
   @override
   Widget build(BuildContext context) {

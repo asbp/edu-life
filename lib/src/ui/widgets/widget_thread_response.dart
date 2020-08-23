@@ -1,4 +1,3 @@
-import 'package:edu_life/src/constants/constant_main.dart';
 import 'package:flutter/material.dart';
 
 class ThreadResponse extends StatelessWidget {
