@@ -32,16 +32,6 @@ class _RegisterState extends State<RegisterPage> {
   TextEditingController textUsername = new TextEditingController();
   TextEditingController textPassword = new TextEditingController();
 
-  void registerUser() {
-    setState(() {
-      username = textUsername.text;
-    });
-    Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (context) => HomeMainLayoutPage(username: username)));
-  }
-
   // dummy register
   void register() {
     if (_formKey.currentState.validate()) {
