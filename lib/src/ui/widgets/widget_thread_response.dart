@@ -6,9 +6,11 @@ class ThreadResponse extends StatelessWidget {
     Key key,
     this.username,
     this.response,
+    this.dialog,
   }) : super(key: key);
 
   final String username, response;
+  final Function dialog;
 
   @override
   Widget build(BuildContext context) {
@@ -29,29 +31,38 @@ class ThreadResponse extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                CircleAvatar(),
-                SizedBox(
-                  width: 20,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
                   children: <Widget>[
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        username,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
+                    CircleAvatar(),
+                    SizedBox(
+                      width: 20,
                     ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Menanggapi",
-                        style: TextStyle(fontStyle: FontStyle.italic),
-                      ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            username,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Menanggapi",
+                            style: TextStyle(fontStyle: FontStyle.italic),
+                          ),
+                        )
+                      ],
                     )
                   ],
+                ),
+                IconButton(
+                  icon: Icon(Icons.delete),
+                  onPressed: dialog,
                 )
               ],
             ),

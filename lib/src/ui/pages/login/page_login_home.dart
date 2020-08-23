@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginPage> {
           decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: colorSecondary),
-              borderRadius: BorderRadius.circular(40)),
+              borderRadius: BorderRadius.circular(20)),
           child: TextFormField(
             controller: textUsername,
             decoration: InputDecoration(
@@ -97,7 +97,7 @@ class _LoginScreenState extends State<LoginPage> {
           decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: colorSecondary),
-              borderRadius: BorderRadius.circular(40)),
+              borderRadius: BorderRadius.circular(20)),
           child: TextFormField(
             controller: textPassword,
             decoration: InputDecoration(
