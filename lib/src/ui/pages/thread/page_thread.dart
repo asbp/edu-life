@@ -1,5 +1,6 @@
 import 'package:edu_life/src/ui/widgets/buttons/button_primary.dart';
 import 'package:edu_life/src/ui/widgets/forum/widget_thread_user_box.dart';
+import 'package:edu_life/src/ui/widgets/widget_thread_response.dart';
 import 'package:flutter/material.dart';
 
 class ThreadPage extends StatefulWidget {
@@ -42,8 +43,16 @@ class _ThreadState extends State<ThreadPage> {
             ],
           ),
           SizedBox(height: 20),
-          Text(
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          RichText(
+            text: TextSpan(
+              text:
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                color: Colors.black,
+              ),
+            ),
+            textAlign: TextAlign.justify,
           ),
           SizedBox(height: 20),
           ButtonPrimary(
@@ -56,43 +65,34 @@ class _ThreadState extends State<ThreadPage> {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 20),
-          Container(    
-            // padding: EdgeInsets.all(10),
-            child: Row(
-              children: <Widget>[
-                CircleAvatar(),
-                SizedBox(width: 20,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Username",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Menanggapi",
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                    )
-                  ],
-                )
-              ],
-            )
+          ThreadResponse(
+            username: "Anonymous",
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          ),
+          ThreadResponse(
+            username: "Anonymous",
+            response:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
           ),
         ],
       ),
     );
   }
 }
+
