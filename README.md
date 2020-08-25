@@ -1,16 +1,30 @@
-# edu_life
+# Edulife
 
-A new Flutter project.
+Edulife is an application to help develop self-potential by learning things that have not been taught before in general, such as ethics which are considered values that are held in behavior.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Make sure you have flutter install on your machine and connected device or emulator to run this project.
+1. Clone this repository
+`git clone https://github.com/agungsatrioo/edu-life`
 
-A few resources to get you started if this is your first Flutter project:
+2. Install dependencies
+`flutter packages get`
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+3. Run this project
+`flutter run`
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Note: If there was any error to run this project try to run this
+`flutter upgrade`
+`flutter clean`
+
+## Contribution
+
+This project is a open source project. Feel free to contribute to this project.
+
+## Team Member
+
+- Agung Satrio
+- Nina Nadia
+- Pratama Yoga
+- Zanuar Ekaputra
